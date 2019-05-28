@@ -1,8 +1,19 @@
 package com.cafe_pol.kiosk;
 
-import javax.swing.*;
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import java.awt.*;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import javax.swing.border.LineBorder;
+import java.awt.Color;
+import javax.swing.border.MatteBorder;
+import javax.swing.border.TitledBorder;
+import javax.swing.JList;
 
 public class Shop_basket extends JDialog {
 
@@ -25,11 +36,22 @@ public class Shop_basket extends JDialog {
 	 * Create the dialog.
 	 */
 	public Shop_basket() {
-		setBounds(800, 300, 450, 300);
+		setBounds(800, 300, 459, 457);
 		getContentPane().setLayout(new BorderLayout());
-		contentPanel.setLayout(new FlowLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
+		contentPanel.setLayout(null);
+		{
+			JLabel lblNewLabel = new JLabel("장바구니");
+			lblNewLabel.setBorder(new TitledBorder(null, "", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+			lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+			lblNewLabel.setBounds(12, 10, 419, 25);
+			contentPanel.add(lblNewLabel);
+		}
+		
+		JList list = new JList();
+		list.setBounds(12, 45, 419, 330);
+		contentPanel.add(list);
 		{
 			JPanel buttonPane = new JPanel();
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
@@ -47,5 +69,4 @@ public class Shop_basket extends JDialog {
 			}
 		}
 	}
-
 }

@@ -1,10 +1,29 @@
 package com.cafe_pol.kiosk;
 
-import javax.swing.*;
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import java.awt.*;
-import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
+import javax.swing.JScrollBar;
+import javax.swing.JScrollPane;
+import javax.swing.JCheckBox;
+import javax.swing.border.TitledBorder;
+import java.awt.Dimension;
+import java.awt.GridLayout;
+import java.awt.Component;
+import javax.swing.ImageIcon;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+import javax.swing.JToggleButton;
+import javax.swing.ButtonGroup;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
 import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class option_select extends JDialog {
 
@@ -52,12 +71,12 @@ public class option_select extends JDialog {
 		
 		JLabel Product_image = new JLabel("New label");
 		Product_image.setIcon(new ImageIcon("C:\\Users\\Jaehyeon\\Pictures\\수정됨_americano.png"));
-		Product_image.setBounds(12, 10, 150, 175);
+		Product_image.setBounds(12, 10, 150, 157);
 		contentPanel.add(Product_image);
 		{
 			Product_label = new JLabel("아메리카노");
-			Product_label.setFont(new Font("나눔명조", Font.PLAIN, 20));
-			Product_label.setBounds(174, 30, 105, 24);
+			Product_label.setFont(new Font("나눔명조", Font.PLAIN, 14));
+			Product_label.setBounds(174, 30, 194, 24);
 			contentPanel.add(Product_label);
 		}
 		{
@@ -144,14 +163,8 @@ public class option_select extends JDialog {
 				JButton okButton = new JButton("주문하기");
 				okButton.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent arg0) {
-						name = Product_label.getText();
-						String s = num_label.getText();
-						Product_label.setText(s);
-						num = Integer.parseInt(s);
-						cup = buttonGroup.;
-						System.out.println(cup);
-
 						cofirm Confirm = new cofirm();
+						
 					}
 				});
 				okButton.setActionCommand("OK");

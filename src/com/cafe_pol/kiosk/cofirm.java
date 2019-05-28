@@ -1,8 +1,14 @@
 package com.cafe_pol.kiosk;
 
-import javax.swing.*;
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import java.awt.*;
+import java.awt.GridLayout;
+import javax.swing.JLabel;
 
 public class cofirm extends JDialog {
 
