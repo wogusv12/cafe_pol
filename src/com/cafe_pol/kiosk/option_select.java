@@ -102,7 +102,7 @@ public class option_select extends JDialog {
 					if(num >1) {
 						num = num-1;
 						num_label.setText(String.valueOf(num));
-						Price_label
+						//Price_label;
 					}
 				}
 			});
