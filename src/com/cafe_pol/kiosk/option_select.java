@@ -43,16 +43,28 @@ public class option_select extends JDialog {
 	Shop_basket shop_basket;
 	String[] ColdBrew = {"콜드 브루", "콜드 브루 몰트", "콜드 브루 플로트", "콜드 폼 콜드 브루", "돌체 콜드브루", "바닐라 크림 콜드 브루"};
 	String[] ColdBrew_en = {"ColdBrew", "ColdBrew Malt", "ColdBrew Float", "Cold Foam ColdBrew", "Dolce ColdBrew", "Vanilla Cream ColdBrew"};
+	int[] ColdBrew_price = {4500,8500,8000,5800,5800,5500};
+
 	String[] Espresso = {"카페라떼", "아이스 카페라떼", "카페 모카", "아이스 카페 모카", "카라멜 마키아또", "아이스 카라멜 마키아또"};
 	String[] Espresso_en = {"Caffe Latte", "Ice Caffe Latte", "Caffe Mocha", "Ice Caffe Mocha", "Caramel Macchiato", "Ice Caramel Macchiato"};
+	int[] Espresso_price = {4600,4600,5100,5100,5600,5600};
+
 	String[] Prapuccino = {"그린티 크림 프라푸치노", "카라멜 프라푸치노", "다크 카라멜 커피 프라푸치노", "모카 프라푸치노", "바닐라 크림 프라푸치노", "자바 칩 프라푸치노"};
 	String[] Prapuccino_en = {"Green Tea Prappuccino", "Caramel Prappuccino", "Dark Caramel Coffee Prappuccino", "Mocha Prappuccino", "Vanilla Cream Frappuccino", "Java Chip Frappuccino"};
+	int[] Prapuccino_price = {6300,5600,6300,5600,4800,6100};
+
 	String[] Blandid = {"딸기 요거트 블렌디드", "딸기 피치 블렌디드", "망고 바나나 블렌디드", "망고 패션 후르츠 블렌디드", "아몬드 바나나 블렌디드", "아보카도 블렌디드"};
-	String[] Blandid_en = {"Strawberry Yogurt Blended", "Strawberry Peach Blended", "Mango Passion Fruit Blended", "Almond Banana Blended", "Avocado Blended"};
+	String[] Blandid_en = {"Strawberry Yogurt Blended", "Strawberry Peach Blended","Mango Banana Blended", "Mango Passion Fruit Blended", "Almond Banana Blended", "Avocado Blended"};
+	int[] Blandid_price = {6100,6300,6300,5000,6500,6900};
+
 	String[] Tibana = {"그린 티 라뗴", "라임 패션 티", "레몬 민트 티", "민트 블렌드 티", "아이스 라임 패션 티", "아이스 레몬 민트 티"};
 	String[] Tibana_en = {"Green Tea Latte","Lime Passion Tea","Iced Lemon Mint Tea","Mint Blend Brewed Tea","Iced Lime Passion Tea", "Iced Lemon Mint Tea"};
+	int[] Tibana_price = {5900,5600,5600,4100,5600,5600};
+
 	String[] Food= {"DT밀당 케이크 촉촉 초코", "구운 바나나 케이크", "레드벨벳 크림치즈 케이크", "마스카포네 티라미수 케이크", "블루베리 쿠키 치즈 케이크", "초콜릿 페스티벌 케이크"};
 	String[] Food_en = {"DT Cake_Rich Chocolate", "Baked Banana Cake", "Red Velvet Cream Cheese Cake","Mascarpone Tiramisu Cake", "Blueberry Cookie Cheese Cake", "Chocolate Festival Cake"};
+	int[] Food_price = {3900,4600,5500,5900,6900,5800};
+
 	String path;
 
 
@@ -152,42 +164,60 @@ public class option_select extends JDialog {
 				}
 			});
 		}
-		switch(option){
+		switch(option) {
 			case 0:
 				path = "ColdBrew";
-				Product_image.setIcon(new ImageIcon("Coffee_Photo\\"+path+"\\"+ColdBrew[item]+".jpg"));
+				Product_image.setIcon(new ImageIcon("Coffee_Photo\\" + path + "\\" + ColdBrew[item] + ".jpg"));
 				Product_label.setText(ColdBrew[item]);
 				Product_en_label.setText(ColdBrew_en[item]);
+				product_price = ColdBrew_price[item];
+				Price_label.setText( product_price+" 원");
+				price = product_price;
 				break;
 			case 1:
 				path = "Espresso";
 				Product_image.setIcon(new ImageIcon("Coffee_Photo\\"+path+"\\"+Espresso[item]+".jpg"));
 				Product_label.setText(Espresso[item]);
 				Product_en_label.setText(Espresso_en[item]);
+				product_price = Espresso_price[item];
+				Price_label.setText( product_price+" 원");
+				price = product_price;
 				break;
 			case 2:
 				path = "Prapuccino";
 				Product_image.setIcon(new ImageIcon("Coffee_Photo\\"+path+"\\"+Prapuccino[item]+".jpg"));
 				Product_label.setText(Prapuccino[item]);
 				Product_en_label.setText(Prapuccino_en[item]);
+				product_price = Prapuccino_price[item];
+				Price_label.setText( product_price+" 원");
+				price = product_price;
 				break;
 			case 3:
 				path = "Blandid";
 				Product_image.setIcon(new ImageIcon("Coffee_Photo\\"+path+"\\"+Blandid[item]+".jpg"));
 				Product_label.setText(Blandid[item]);
 				Product_en_label.setText(Blandid_en[item]);
+				product_price = Blandid_price[item];
+				Price_label.setText( product_price+" 원");
+				price = product_price;
 				break;
 			case 4:
 				path = "Tibana(Tea)";
 				Product_image.setIcon(new ImageIcon("Coffee_Photo\\"+path+"\\"+Tibana[item]+".jpg"));
 				Product_label.setText(Tibana[item]);
 				Product_en_label.setText(Tibana_en[item]);
+				product_price = Tibana_price[item];
+				Price_label.setText( product_price+" 원");
+				price = product_price;
 				break;
 			case 5:
 				path = "Food";
 				Product_image.setIcon(new ImageIcon("Coffee_Photo\\"+path+"\\"+Food[item]+".jpg"));
 				Product_label.setText(Food[item]);
 				Product_en_label.setText(Food_en[item]);
+				product_price = Food_price[item];
+				Price_label.setText( product_price+" 원");
+				price = product_price;
 				break;
 		}
 		
