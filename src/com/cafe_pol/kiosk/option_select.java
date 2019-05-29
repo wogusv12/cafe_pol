@@ -24,13 +24,16 @@ import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.util.Vector;
 
 public class option_select extends JDialog {
 
 	private final JPanel contentPanel = new JPanel();
 	private final ButtonGroup buttonGroup = new ButtonGroup();
+	int product_price = 4000;
+	int price = product_price;
 	String name;
-	int num;
+	int num =1;
 	String cup;
 	String Size;
 	int shot;
@@ -85,7 +88,7 @@ public class option_select extends JDialog {
 			contentPanel.add(Product_en_label);
 		}
 		{
-			Price_label = new JLabel("4000 원");
+			Price_label = new JLabel(price+" 원");
 			Price_label.setFont(new Font("함초롬돋움", Font.PLAIN, 20));
 			Price_label.setBounds(174, 89, 105, 42);
 			contentPanel.add(Price_label);
@@ -93,6 +96,16 @@ public class option_select extends JDialog {
 		{
 			JButton low_btn = new JButton("<");
 			low_btn.setBounds(174, 141, 41, 23);
+			low_btn.addActionListener(new ActionListener() {
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					if(num >1) {
+						num = num-1;
+						num_label.setText(String.valueOf(num));
+						Price_label
+					}
+				}
+			});
 			contentPanel.add(low_btn);
 		}
 		{
@@ -105,6 +118,14 @@ public class option_select extends JDialog {
 			JButton high_btn = new JButton(">");
 			high_btn.setBounds(267, 141, 41, 23);
 			contentPanel.add(high_btn);
+
+			high_btn.addActionListener(new ActionListener() {
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					num+=1;
+					num_label.setText(String.valueOf(num));
+				}
+			});
 		}
 		
 		JToggleButton mug_cup = new JToggleButton("머그컵");
@@ -136,10 +157,10 @@ public class option_select extends JDialog {
 		size_label.setBounds(28, 280, 95, 15);
 		contentPanel.add(size_label);
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"0", "1", "2", "3", "4", "5"}));
-		comboBox.setBounds(135, 308, 202, 21);
-		contentPanel.add(comboBox);
+		JComboBox select_shot = new JComboBox();
+		select_shot.setModel(new DefaultComboBoxModel(new String[] {"0", "1", "2", "3", "4", "5"}));
+		select_shot.setBounds(135, 308, 202, 21);
+		contentPanel.add(select_shot);
 		
 		JLabel label = new JLabel("샷 추가");
 		label.setHorizontalAlignment(SwingConstants.CENTER);
@@ -151,10 +172,10 @@ public class option_select extends JDialog {
 		label_1.setBounds(32, 340, 91, 15);
 		contentPanel.add(label_1);
 		
-		JComboBox comboBox_1 = new JComboBox();
-		comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"기본", "적게", "많이"}));
-		comboBox_1.setBounds(135, 338, 202, 21);
-		contentPanel.add(comboBox_1);
+		JComboBox select_ice= new JComboBox();
+		select_ice.setModel(new DefaultComboBoxModel(new String[] {"기본", "적게", "많이"}));
+		select_ice.setBounds(135, 338, 202, 21);
+		contentPanel.add(select_ice);
 		{
 			JPanel buttonPane = new JPanel();
 			getContentPane().add(buttonPane, BorderLayout.SOUTH);
@@ -163,8 +184,29 @@ public class option_select extends JDialog {
 				JButton okButton = new JButton("주문하기");
 				okButton.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent arg0) {
+
+						name = Product_label.toString();
+					//	price = Integer.parseInt(Price_label.toString());
+						if(mug_cup.isSelected() == true){
+							cup = "머그컵";
+						}else if(personal_cup.isSelected() == true) {
+							cup = "개인용 컵";
+						}else if(plastic_cup.isSelected() == true ) {
+							cup = "플라스틱 컵";
+						}
+
+						Size = select_size.getSelectedItem().toString();
+						shot = Integer.parseInt(select_shot.getSelectedItem().toString());
+						ice = select_ice.getSelectedItem().toString();
+						System.out.println(Product_label.getText());
+						System.out.println(Price_label.getText());
+						System.out.println(num);
+						System.out.println(cup);
+						System.out.println(Size);
+						System.out.println(shot);
+						System.out.println(ice);
 						cofirm Confirm = new cofirm();
-						
+
 					}
 				});
 				okButton.setActionCommand("OK");
