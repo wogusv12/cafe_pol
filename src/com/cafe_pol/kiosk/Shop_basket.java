@@ -26,7 +26,7 @@ public class Shop_basket extends JDialog {
 		try {
 			Shop_basket dialog = new Shop_basket();
 			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-			dialog.setVisible(true);
+			dialog.setVisible(false);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

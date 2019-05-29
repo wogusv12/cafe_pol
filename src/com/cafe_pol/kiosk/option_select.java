@@ -39,29 +39,47 @@ public class option_select extends JDialog {
 	int shot;
 	String ice;
 	JLabel Product_label, Product_en_label, Price_label, num_label;
+	int option, item;
+	Shop_basket shop_basket;
+	String[] ColdBrew = {"콜드 브루", "콜드 브루 몰트", "콜드 브루 플로트", "콜드 폼 콜드 브루", "돌체 콜드브루", "바닐라 크림 콜드 브루"};
+	String[] ColdBrew_en = {"ColdBrew", "ColdBrew Malt", "ColdBrew Float", "Cold Foam ColdBrew", "Dolce ColdBrew", "Vanilla Cream ColdBrew"};
+	String[] Espresso = {"카페라떼", "아이스 카페라떼", "카페 모카", "아이스 카페 모카", "카라멜 마키아또", "아이스 카라멜 마키아또"};
+	String[] Espresso_en = {"Caffe Latte", "Ice Caffe Latte", "Caffe Mocha", "Ice Caffe Mocha", "Caramel Macchiato", "Ice Caramel Macchiato"};
+	String[] Prapuccino = {"그린티 크림 프라푸치노", "카라멜 프라푸치노", "다크 카라멜 커피 프라푸치노", "모카 프라푸치노", "바닐라 크림 프라푸치노", "자바 칩 프라푸치노"};
+	String[] Prapuccino_en = {"Green Tea Prappuccino", "Caramel Prappuccino", "Dark Caramel Coffee Prappuccino", "Mocha Prappuccino", "Vanilla Cream Frappuccino", "Java Chip Frappuccino"};
+	String[] Blandid = {"딸기 요거트 블렌디드", "딸기 피치 블렌디드", "망고 바나나 블렌디드", "망고 패션 후르츠 블렌디드", "아몬드 바나나 블렌디드", "아보카도 블렌디드"};
+	String[] Blandid_en = {"Strawberry Yogurt Blended", "Strawberry Peach Blended", "Mango Passion Fruit Blended", "Almond Banana Blended", "Avocado Blended"};
+	String[] Tibana = {"그린 티 라뗴", "라임 패션 티", "레몬 민트 티", "민트 블렌드 티", "아이스 라임 패션 티", "아이스 레몬 민트 티"};
+	String[] Tibana_en = {"Green Tea Latte","Lime Passion Tea","Iced Lemon Mint Tea","Mint Blend Brewed Tea","Iced Lime Passion Tea", "Iced Lemon Mint Tea"};
+	String[] Food= {"DT밀당 케이크 촉촉 초코", "구운 바나나 케이크", "레드벨벳 크림치즈 케이크", "마스카포네 티라미수 케이크", "블루베리 쿠키 치즈 케이크", "초콜릿 페스티벌 케이크"};
+	String[] Food_en = {"DT Cake_Rich Chocolate", "Baked Banana Cake", "Red Velvet Cream Cheese Cake","Mascarpone Tiramisu Cake", "Blueberry Cookie Cheese Cake", "Chocolate Festival Cake"};
+	String path;
 
 
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		try {
+	/*public static void main(String[] args) {
+		/*try {
 			option_select dialog = new option_select();
 			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 			dialog.setVisible(true);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	}
+	}*/
 
 	/**
 	 * Create the dialog.
 	 */
-	public option_select() {
+	public option_select(int option, int item, Shop_basket shop_basket) {
+		this.shop_basket = shop_basket;
 		setResizable(false);
 		getContentPane().setSize(new Dimension(300, 50));
 		setBounds(800, 300, 388, 500);
 		getContentPane().setLayout(new BorderLayout());
+		setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+		setVisible(true);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setPreferredSize(new Dimension(380, 300));
@@ -73,18 +91,19 @@ public class option_select extends JDialog {
 		contentPanel.setLayout(null);
 		
 		JLabel Product_image = new JLabel("New label");
-		Product_image.setIcon(new ImageIcon("C:\\Users\\Jaehyeon\\Pictures\\수정됨_americano.png"));
+
+
 		Product_image.setBounds(12, 10, 150, 157);
 		contentPanel.add(Product_image);
 		{
 			Product_label = new JLabel("아메리카노");
-			Product_label.setFont(new Font("나눔명조", Font.PLAIN, 14));
+			Product_label.setFont(new Font("나눔고딕", Font.PLAIN, 14));
 			Product_label.setBounds(174, 30, 194, 24);
 			contentPanel.add(Product_label);
 		}
 		{
 			Product_en_label = new JLabel("Americano");
-			Product_en_label.setBounds(174, 64, 72, 15);
+			Product_en_label.setBounds(174, 64, 194, 15);
 			contentPanel.add(Product_en_label);
 		}
 		{
@@ -102,7 +121,8 @@ public class option_select extends JDialog {
 					if(num >1) {
 						num = num-1;
 						num_label.setText(String.valueOf(num));
-						Price_label
+						price = price - product_price;
+						Price_label.setText(price + " 원");
 					}
 				}
 			});
@@ -124,8 +144,48 @@ public class option_select extends JDialog {
 				public void actionPerformed(ActionEvent e) {
 					num+=1;
 					num_label.setText(String.valueOf(num));
+					price = price + product_price;
+					Price_label.setText(price + " 원");
 				}
 			});
+		}
+		switch(option){
+			case 0:
+				path = "ColdBrew";
+				Product_image.setIcon(new ImageIcon("Coffee_Photo\\"+path+"\\"+ColdBrew[item]+".jpg"));
+				Product_label.setText(ColdBrew[item]);
+				Product_en_label.setText(ColdBrew_en[item]);
+				break;
+			case 1:
+				path = "Espresso";
+				Product_image.setIcon(new ImageIcon("Coffee_Photo\\"+path+"\\"+Espresso[item]+".jpg"));
+				Product_label.setText(Espresso[item]);
+				Product_en_label.setText(Espresso_en[item]);
+				break;
+			case 2:
+				path = "Prapuccino";
+				Product_image.setIcon(new ImageIcon("Coffee_Photo\\"+path+"\\"+Prapuccino[item]+".jpg"));
+				Product_label.setText(Prapuccino[item]);
+				Product_en_label.setText(Prapuccino_en[item]);
+				break;
+			case 3:
+				path = "Blandid";
+				Product_image.setIcon(new ImageIcon("Coffee_Photo\\"+path+"\\"+Blandid[item]+".jpg"));
+				Product_label.setText(Blandid[item]);
+				Product_en_label.setText(Blandid_en[item]);
+				break;
+			case 4:
+				path = "Tibana(Tea)";
+				Product_image.setIcon(new ImageIcon("Coffee_Photo\\"+path+"\\"+Tibana[item]+".jpg"));
+				Product_label.setText(Tibana[item]);
+				Product_en_label.setText(Tibana_en[item]);
+				break;
+			case 5:
+				path = "Food";
+				Product_image.setIcon(new ImageIcon("Coffee_Photo\\"+path+"\\"+Food[item]+".jpg"));
+				Product_label.setText(Food[item]);
+				Product_en_label.setText(Food_en[item]);
+				break;
 		}
 		
 		JToggleButton mug_cup = new JToggleButton("머그컵");
