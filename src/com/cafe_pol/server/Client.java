@@ -6,7 +6,9 @@ import java.net.Socket;
 public class Client {
     public static void main(String[] args) {
         Client cl = new Client();
-        cl.ClientRun("MessageText");
+        cl.ClientRun("alpha");
+        cl.ClientRun("beta");
+        cl.ClientRun("quit");
     }
     public void ClientRun(String data) {
 
@@ -20,7 +22,7 @@ public class Client {
         BufferedReader br = null;
 
         try {
-            socket = new Socket("localhost", 4200);
+            socket = new Socket("localhost", 4201);
             os = socket.getOutputStream();
             osw = new OutputStreamWriter(os);
             bw = new BufferedWriter(osw);            //서버로 전송을 위한 OutputStream
