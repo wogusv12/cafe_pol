@@ -121,12 +121,11 @@ public class option_select extends JDialog {
 					if(num >1) {
 						num = num-1;
 						num_label.setText(String.valueOf(num));
-<<<<<<< HEAD
 						price = price - product_price;
 						Price_label.setText(price + " 원");
-=======
+
 						//Price_label;
->>>>>>> 1ed01592c1c3a2663d590b5c9ad3769a326a5c3a
+
 					}
 				}
 			});
