@@ -92,7 +92,7 @@ public class option_select extends JDialog {
 		getContentPane().setLayout(new BorderLayout());
 		setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 		setVisible(true);
-		
+
 		JPanel panel_1 = new JPanel();
 		panel_1.setPreferredSize(new Dimension(380, 300));
 		getContentPane().add(panel_1, BorderLayout.WEST);
@@ -291,13 +291,14 @@ public class option_select extends JDialog {
 						Size = select_size.getSelectedItem().toString();
 						shot = Integer.parseInt(select_shot.getSelectedItem().toString());
 						ice = select_ice.getSelectedItem().toString();
-						System.out.println(Product_label.getText());
+						System.out.println(Product_label.getText() + "/" +price+"/"+num+"/"+cup+"/"+Size+"/"+shot+"/"+ice);
 						System.out.println(Price_label.getText());
 						System.out.println(num);
 						System.out.println(cup);
 						System.out.println(Size);
 						System.out.println(shot);
 						System.out.println(ice);
+					//	shop_basket.list.;
 						cofirm Confirm = new cofirm();
 
 					}

@@ -18,6 +18,7 @@ import javax.swing.JList;
 public class Shop_basket extends JDialog {
 
 	private final JPanel contentPanel = new JPanel();
+	JList list;
 
 	/**
 	 * Launch the application.
@@ -49,7 +50,7 @@ public class Shop_basket extends JDialog {
 			contentPanel.add(lblNewLabel);
 		}
 		
-		JList list = new JList();
+		list = new JList();
 		list.setBounds(12, 45, 419, 330);
 		contentPanel.add(list);
 		{
