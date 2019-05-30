@@ -1,29 +1,20 @@
 package com.cafe_pol.kiosk;
 
+import javafx.scene.control.Alert;
+
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JPanel;
+import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
-import javax.swing.JScrollBar;
-import javax.swing.JScrollPane;
-import javax.swing.JCheckBox;
 import javax.swing.border.TitledBorder;
 import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.Component;
-import javax.swing.ImageIcon;
 import java.awt.Font;
-import javax.swing.SwingConstants;
-import javax.swing.JToggleButton;
-import javax.swing.ButtonGroup;
-import javax.swing.JComboBox;
-import javax.swing.DefaultComboBoxModel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.io.PrintWriter;
 import java.util.Vector;
 
 public class option_select extends JDialog {
@@ -65,6 +56,8 @@ public class option_select extends JDialog {
 	String[] Food_en = {"DT Cake_Rich Chocolate", "Baked Banana Cake", "Red Velvet Cream Cheese Cake","Mascarpone Tiramisu Cake", "Blueberry Cookie Cheese Cake", "Chocolate Festival Cake"};
 	int[] Food_price = {3900,4600,5500,5900,6900,5800};
 
+	JComboBox select_shot;
+	JComboBox select_size;
 	String path;
 
 
@@ -133,7 +126,8 @@ public class option_select extends JDialog {
 					if(num >1) {
 						num = num-1;
 						num_label.setText(String.valueOf(num));
-						price = price - product_price;
+						shot = Integer.parseInt(select_shot.getSelectedItem().toString());
+						price = price - (product_price +  (shot *500)+(select_size.getSelectedIndex()*500));
 						Price_label.setText(price + " 원");
 
 						//Price_label;
@@ -159,7 +153,8 @@ public class option_select extends JDialog {
 				public void actionPerformed(ActionEvent e) {
 					num+=1;
 					num_label.setText(String.valueOf(num));
-					price = price + product_price;
+					shot = Integer.parseInt(select_shot.getSelectedItem().toString());
+					price = price + (product_price +  (shot *500) + (select_size.getSelectedIndex()*500));
 					Price_label.setText(price + " 원");
 				}
 			});
@@ -240,9 +235,17 @@ public class option_select extends JDialog {
 		select_cup.setBounds(32, 190, 57, 15);
 		contentPanel.add(select_cup);
 		
-		JComboBox select_size = new JComboBox();
+		select_size = new JComboBox();
 		select_size.setModel(new DefaultComboBoxModel(new String[] {"Tall", "Grande (+500)", "Venti (+1000)"}));
 		select_size.setBounds(135, 277, 202, 21);
+		select_size.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				price = (product_price + (Integer.parseInt(select_shot.getSelectedItem().toString())*500))*num;
+				price = price + ((select_size.getSelectedIndex()*500) * num);
+				Price_label.setText(price + " 원");
+			}
+		});
 		contentPanel.add(select_size);
 		
 		JLabel size_label = new JLabel("사이즈");
@@ -250,9 +253,17 @@ public class option_select extends JDialog {
 		size_label.setBounds(28, 280, 95, 15);
 		contentPanel.add(size_label);
 		
-		JComboBox select_shot = new JComboBox();
+		select_shot = new JComboBox();
 		select_shot.setModel(new DefaultComboBoxModel(new String[] {"0", "1", "2", "3", "4", "5"}));
 		select_shot.setBounds(135, 308, 202, 21);
+		select_shot.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				price = (product_price + (select_size.getSelectedIndex() * 500))*num;
+				price = price + (Integer.parseInt(select_shot.getSelectedItem().toString())*500*num);
+				Price_label.setText(price + " 원");
+			}
+		});
 		contentPanel.add(select_shot);
 		
 		JLabel label = new JLabel("샷 추가");
@@ -277,39 +288,49 @@ public class option_select extends JDialog {
 				JButton okButton = new JButton("주문하기");
 				okButton.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent arg0) {
-
+					if(mug_cup.isSelected()==true||personal_cup.isSelected()==true||plastic_cup.isSelected() == true) {
 						name = Product_label.toString();
-					//	price = Integer.parseInt(Price_label.toString());
-						if(mug_cup.isSelected() == true){
+						//	price = Integer.parseInt(Price_label.toString());
+						if (mug_cup.isSelected() == true) {
 							cup = "머그컵";
-						}else if(personal_cup.isSelected() == true) {
+						} else if (personal_cup.isSelected() == true) {
 							cup = "개인용 컵";
-						}else if(plastic_cup.isSelected() == true ) {
+						} else if (plastic_cup.isSelected() == true) {
 							cup = "플라스틱 컵";
 						}
 
 						Size = select_size.getSelectedItem().toString();
 						shot = Integer.parseInt(select_shot.getSelectedItem().toString());
 						ice = select_ice.getSelectedItem().toString();
-						System.out.println(Product_label.getText() + "/" +price+"/"+num+"/"+cup+"/"+Size+"/"+shot+"/"+ice);
+						System.out.println(Product_label.getText() + "/" + price + "/" + num + "/" + cup + "/" + Size + "/" + shot + "/" + ice);
+
 						System.out.println(Price_label.getText());
 						System.out.println(num);
 						System.out.println(cup);
 						System.out.println(Size);
 						System.out.println(shot);
 						System.out.println(ice);
-					//	shop_basket.list.;
+						shop_basket.input_data(Product_label.getText() + "/" + price + "/" + num + "/" + cup + "/" + Size + "/" + shot + "/" + ice);
 						cofirm Confirm = new cofirm();
-
+					}else{
+						  JOptionPane.showMessageDialog(null, "컵을 선택해주세요!", "Error", JOptionPane.WARNING_MESSAGE);
+						}
 					}
 				});
 				okButton.setActionCommand("OK");
 				buttonPane.add(okButton);
 				getRootPane().setDefaultButton(okButton);
+
 			}
 			{
 				JButton cancelButton = new JButton("취소");
 				cancelButton.setActionCommand("Cancel");
+				cancelButton.addActionListener(new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						dispose();
+					}
+				});
 				buttonPane.add(cancelButton);
 			}
 		}

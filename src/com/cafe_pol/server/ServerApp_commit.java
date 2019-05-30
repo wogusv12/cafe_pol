@@ -1,24 +1,23 @@
-package com.cafe_pol.kiosk;
+package com.cafe_pol.server;
 
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import java.awt.Font;
+import javax.swing.JList;
+import javax.swing.AbstractListModel;
+import javax.swing.border.LineBorder;
 import java.awt.Color;
+import java.awt.event.KeyEvent;
 import java.awt.ComponentOrientation;
 import java.awt.Cursor;
-import java.awt.EventQueue;
-import java.awt.Font;
-import java.awt.event.KeyEvent;
-
-import javax.swing.AbstractListModel;
 import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JList;
-import javax.swing.JPanel;
-import javax.swing.SwingConstants;
-import javax.swing.border.EmptyBorder;
-import javax.swing.border.LineBorder;
 
-public class ServerApp_Push extends JDialog {
+public class ServerApp_commit extends JFrame {
 
 	private JPanel contentPane;
 
@@ -41,7 +40,7 @@ public class ServerApp_Push extends JDialog {
 	/**
 	 * Create the frame.
 	 */
-	public ServerApp_Push() {
+	public ServerApp_commit() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 650, 500);
 		contentPane = new JPanel();
@@ -53,10 +52,10 @@ public class ServerApp_Push extends JDialog {
 		label.setBounds(12, 49, 57, 15);
 		contentPane.add(label);
 		
-		JLabel label_1 = new JLabel("선택한 주문입니다.");
+		JLabel label_1 = new JLabel("새로운 주문이 도착했습니다.");
 		label_1.setFont(new Font("굴림", Font.PLAIN, 16));
 		label_1.setHorizontalAlignment(SwingConstants.CENTER);
-		label_1.setBounds(191, 10, 231, 28);
+		label_1.setBounds(188, 10, 231, 28);
 		contentPane.add(label_1);
 		
 		JLabel label_2 = new JLabel("2019-05-28 17:18:19");
@@ -174,14 +173,9 @@ public class ServerApp_Push extends JDialog {
 		list_5.setBounds(535, 103, 57, 258);
 		contentPane.add(list_5);
 		
-		JButton btnNewButton = new JButton("제조 완료");
+		JButton btnNewButton = new JButton("확인");
 		btnNewButton.setActionCommand("");
-		btnNewButton.setBounds(2, 399, 313, 58);
+		btnNewButton.setBounds(2, 399, 628, 58);
 		contentPane.add(btnNewButton);
-		
-		JButton button = new JButton("종료");
-		button.setActionCommand("");
-		button.setBounds(321, 399, 313, 58);
-		contentPane.add(button);
 	}
 }

@@ -1,6 +1,5 @@
-package com.cafe_pol.kiosk;
+package com.cafe_pol.server;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -9,7 +8,6 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
-import java.awt.GridLayout;
 import javax.swing.border.LineBorder;
 import java.awt.Color;
 import javax.swing.JList;

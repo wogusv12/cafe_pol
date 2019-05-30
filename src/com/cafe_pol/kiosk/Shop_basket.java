@@ -3,22 +3,20 @@ package com.cafe_pol.kiosk;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JPanel;
+import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
-import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
 import java.awt.Color;
 import javax.swing.border.MatteBorder;
 import javax.swing.border.TitledBorder;
-import javax.swing.JList;
 
 public class Shop_basket extends JDialog {
 
 	private final JPanel contentPanel = new JPanel();
-	JList list;
+	DefaultListModel model = new DefaultListModel();
+	JList list = new JList(model);
+
+	int i = 0;
 
 	/**
 	 * Launch the application.
@@ -50,8 +48,9 @@ public class Shop_basket extends JDialog {
 			contentPanel.add(lblNewLabel);
 		}
 		
-		list = new JList();
+
 		list.setBounds(12, 45, 419, 330);
+
 		contentPanel.add(list);
 		{
 			JPanel buttonPane = new JPanel();
@@ -69,5 +68,9 @@ public class Shop_basket extends JDialog {
 				buttonPane.add(cancelButton);
 			}
 		}
+	}
+	public void input_data(String s) {
+		model.add(i, s);
+		i++;
 	}
 }
