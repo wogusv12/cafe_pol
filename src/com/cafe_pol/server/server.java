@@ -4,6 +4,7 @@ package com.cafe_pol.server;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.StringTokenizer;
 
 public class server {
     public static void main(String[] args){
@@ -33,10 +34,18 @@ public class server {
                     br = new BufferedReader(isr);
                     // 클라이언트로부터 데이터를 받기 위한 InputStream 선언
 
+
                     String data = null;
                     data = br.readLine();
                     System.out.println("클라이언트로 부터 받은 데이터:" + data);
+                    //받는 데이터 형식  string(Product_label.getText() + "/" +price+"/"+num+"/"+cup+"/"+Size+"/"+shot+"/"+ice);
 
+
+                    String str = data;
+                    String[] values=str.split("/"); // '/'를 구분자로 사용하셔 문자열 짜르기
+                    for(int x=0;x<values.length;x++){
+                        System.out.println("문자"+(x+1)+" = "+values[x]);
+                    }
 
                     receiveData(data, socket);         // 받은 데이터를 그대로 다시 보내기
                     System.out.println("****** 전송 완료 ****");

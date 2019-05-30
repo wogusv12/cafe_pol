@@ -6,9 +6,9 @@ import java.net.Socket;
 public class Client {
     public static void main(String[] args) {
         Client cl = new Client();
-        cl.ClientRun("alpha");
-        cl.ClientRun("beta");
-        cl.ClientRun("quit");
+        cl.ClientRun("alpha/beta/C/D/E/F/G");
+        cl.ClientRun("A/B/ce/de/ee/fe/ge");
+        //cl.ClientRun("quit");
     }
     public void ClientRun(String data) {
 
