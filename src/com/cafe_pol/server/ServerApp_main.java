@@ -34,23 +34,23 @@ public class ServerApp_main extends JFrame {
 
 	/**
 	 * Create the frame.
-	 */
+				*/
 	public ServerApp_main() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1366, 768);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
-		contentPane.setLayout(null);
-		
-		JPanel panel = new JPanel();
-		panel.setBorder(new TitledBorder(null, "", TitledBorder.LEADING, TitledBorder.TOP, null, null));
-		panel.setBounds(5, 5, 1340, 47);
-		contentPane.add(panel);
-		
-		JLabel lblNewLabel = new JLabel("이것은 주문받는 화면");
-		panel.add(lblNewLabel);
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			setBounds(100, 100, 1366, 768);
+			contentPane = new JPanel();
+			contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+			setContentPane(contentPane);
+			contentPane.setLayout(null);
+
+			JPanel panel = new JPanel();
+			panel.setBorder(new TitledBorder(null, "", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+			panel.setBounds(5, 5, 1340, 47);
+			contentPane.add(panel);
+
+			JLabel lblNewLabel = new JLabel("이것은 주문받는 화면");
+			panel.add(lblNewLabel);
+			lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBounds(5, 62, 1340, 657);
