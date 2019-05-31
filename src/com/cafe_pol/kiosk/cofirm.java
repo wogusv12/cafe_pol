@@ -8,12 +8,14 @@ import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JLabel;
 
 public class cofirm extends JDialog {
 
 	private final JPanel contentPanel = new JPanel();
-
+	Shop_basket sb;
 	/**
 	 * Launch the application.
 	 */
@@ -25,6 +27,13 @@ public class cofirm extends JDialog {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	public void get_basket(Shop_basket s_b){
+		this.sb = s_b;
+
+	}
+	public void get_option_select(option_select os) {
+
 	}
 
 	/**
@@ -52,15 +61,32 @@ public class cofirm extends JDialog {
 				okButton.setActionCommand("OK");
 				buttonPane.add(okButton);
 				getRootPane().setDefaultButton(okButton);
+				okButton.addActionListener(new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						sb.setVisible(true);
+						sb.setFocusable(true);
+						dispose();
+
+					}
+				});
+
 			}
 			{
 				JButton cancelButton = new JButton("추가 주문하기");
 				cancelButton.setActionCommand("Cancel");
 				buttonPane.add(cancelButton);
+				cancelButton.addActionListener(new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						dispose();
+					}
+				});
 			}
 		}
 		setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 		setVisible(true);
 	}
+
 
 }

@@ -212,6 +212,7 @@ public class option_select extends JDialog {
 				Product_en_label.setText(Food_en[item]);
 				product_price = Food_price[item];
 				Price_label.setText( product_price+" 원");
+
 				price = product_price;
 				break;
 		}
@@ -322,6 +323,9 @@ public class option_select extends JDialog {
 						System.out.println(ice);
 						shop_basket.input_data(Product_label.getText() + "/" + price + "/" + num + "/" + cup + "/" + Size + "/" + shot + "/" + ice);
 						cofirm Confirm = new cofirm();
+						Confirm.get_basket(shop_basket);
+						//Confirm.get_option_select(this);
+						dispose();
 					}else{
 						  JOptionPane.showMessageDialog(null, "컵을 선택해주세요!", "Error", JOptionPane.WARNING_MESSAGE);
 						}

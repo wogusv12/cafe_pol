@@ -7,6 +7,8 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.border.MatteBorder;
 import javax.swing.border.TitledBorder;
 
@@ -15,6 +17,7 @@ public class Shop_basket extends JDialog {
 	private final JPanel contentPanel = new JPanel();
 	DefaultListModel model = new DefaultListModel();
 	JList list = new JList(model);
+	int order_number = 0;
 
 	int i = 0;
 
@@ -61,11 +64,33 @@ public class Shop_basket extends JDialog {
 				okButton.setActionCommand("OK");
 				buttonPane.add(okButton);
 				getRootPane().setDefaultButton(okButton);
+				okButton.addActionListener(new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						if(model.getSize() !=0) {
+
+							for (int j = 0; j < model.getSize(); j++) {
+								System.out.println(order_number + "/" + model.get(j).toString());
+							}
+							order_number++;
+							model.clear();
+							i = 0;
+						}else {
+							JOptionPane.showMessageDialog(null, "장바구니가 비었습니다!", "Error", JOptionPane.WARNING_MESSAGE);
+						}
+					}
+				});
 			}
 			{
 				JButton cancelButton = new JButton("Cancel");
 				cancelButton.setActionCommand("Cancel");
 				buttonPane.add(cancelButton);
+				cancelButton.addActionListener(new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						setVisible(false);
+					}
+				});
 			}
 		}
 	}
