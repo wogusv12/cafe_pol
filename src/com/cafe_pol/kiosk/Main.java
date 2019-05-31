@@ -58,7 +58,7 @@ public class Main extends JFrame implements ActionListener {
 	 * Create the frame.
 	 */
 	public Main() {
-		shop_basket = new Shop_basket();
+		shop_basket = new Shop_basket(); // 장바구니를 프로그램 실행시 같이 켜지나 setVisible이 false
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 600, 860 );
@@ -66,7 +66,7 @@ public class Main extends JFrame implements ActionListener {
 		contentPane.setLayout(new BorderLayout(10, 0));
 		setContentPane(contentPane);
 		
-		JLabel lblNewLabel = new JLabel("\uBA54\uB274 \uC120\uD0DD");
+		JLabel lblNewLabel = new JLabel("\uBA54\uB274 \uC120\uD0DD");  //메뉴선택 Label
 		lblNewLabel.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
 		lblNewLabel.setPreferredSize(new Dimension(52, 30));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -76,7 +76,8 @@ public class Main extends JFrame implements ActionListener {
 		panel.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
 		contentPane.add(panel, BorderLayout.WEST);
 		panel.setLayout(new GridLayout(0, 1, 0, 5));
-		
+
+		//카테고리  버튼 선택
 		category_btn1 = new JButton("콜드브루");
 		category_btn1.addActionListener(this);
 		panel.add(category_btn1);
@@ -103,7 +104,8 @@ public class Main extends JFrame implements ActionListener {
 		
 		JPanel panel_1 = new JPanel();
 		contentPane.add(panel_1, BorderLayout.SOUTH);
-		
+
+		//장바구니 버튼
 		JButton shop_btn = new JButton("\uC7A5\uBC14\uAD6C\uB2C8");
 		shop_btn.setPreferredSize(new Dimension(780, 30));
 		shop_btn.addActionListener(new ActionListener() {
@@ -119,7 +121,7 @@ public class Main extends JFrame implements ActionListener {
 		contentPane.add(panel_2, BorderLayout.CENTER);
 		panel_2.setLayout(new GridLayout(0, 3, 10, 10));
 		
-		
+		//기본 메뉴 설정 - 시작시 기본은 option = 0;
 		Menu_btn1 = new JButton();
 		Menu_btn1.setIconTextGap(0);
 		Menu_btn1.setIcon(new ImageIcon("Coffee_Photo\\ColdBrew\\콜드 브루.jpg"));
@@ -143,7 +145,7 @@ public class Main extends JFrame implements ActionListener {
 		Menu_btn5.addActionListener(this);
 		Menu_btn6.addActionListener(this);
 	}
-
+	//버튼클릭 이벤트 구현
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource() == Menu_btn1) {
@@ -171,6 +173,8 @@ public class Main extends JFrame implements ActionListener {
 			new option_select(option,item,shop_basket);
 		}
 
+
+		//카테고리 버튼 클릭시 버튼 아이콘 수정
 		if(e.getSource() == category_btn1) {
 			option = 0;
 			Menu_btn1.setIcon(new ImageIcon("Coffee_Photo\\ColdBrew\\콜드 브루.jpg"));

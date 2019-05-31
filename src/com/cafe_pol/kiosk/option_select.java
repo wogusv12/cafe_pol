@@ -1,21 +1,16 @@
 package com.cafe_pol.kiosk;
 
-import javafx.scene.control.Alert;
-
 import java.awt.BorderLayout;
-import java.awt.FlowLayout;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-import javax.swing.border.TitledBorder;
 import java.awt.Dimension;
 import java.awt.GridLayout;
-import java.awt.Component;
+
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import java.io.PrintWriter;
-import java.util.Vector;
+
 
 public class option_select extends JDialog {
 
@@ -31,7 +26,12 @@ public class option_select extends JDialog {
 	String ice;
 	JLabel Product_label, Product_en_label, Price_label, num_label;
 	int option, item;
+	JLabel label_1 = new JLabel("얼음양");;
 	Shop_basket shop_basket;
+	JComboBox select_ice= new JComboBox();;
+
+
+	//이름, 영어이름, 가격 배열로 설정
 	String[] ColdBrew = {"콜드 브루", "콜드 브루 몰트", "콜드 브루 플로트", "콜드 폼 콜드 브루", "돌체 콜드브루", "바닐라 크림 콜드 브루"};
 	String[] ColdBrew_en = {"ColdBrew", "ColdBrew Malt", "ColdBrew Float", "Cold Foam ColdBrew", "Dolce ColdBrew", "Vanilla Cream ColdBrew"};
 	int[] ColdBrew_price = {4500,8500,8000,5800,5800,5500};
@@ -61,18 +61,6 @@ public class option_select extends JDialog {
 	String path;
 
 
-	/**
-	 * Launch the application.
-	 */
-	/*public static void main(String[] args) {
-		/*try {
-			option_select dialog = new option_select();
-			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-			dialog.setVisible(true);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}*/
 
 	/**
 	 * Create the dialog.
@@ -99,6 +87,7 @@ public class option_select extends JDialog {
 
 
 		Product_image.setBounds(12, 10, 150, 157);
+		//상품 리스트 테스트 - 다른값으로 덮어씌워짐
 		contentPanel.add(Product_image);
 		{
 			Product_label = new JLabel("아메리카노");
@@ -177,6 +166,11 @@ public class option_select extends JDialog {
 				product_price = Espresso_price[item];
 				Price_label.setText( product_price+" 원");
 				price = product_price;
+				if(item == 0 || item == 2 || item == 4) {
+					label_1.setVisible(false);
+					select_ice.setVisible(false);
+
+				}
 				break;
 			case 2:
 				path = "Prapuccino";
@@ -204,6 +198,12 @@ public class option_select extends JDialog {
 				product_price = Tibana_price[item];
 				Price_label.setText( product_price+" 원");
 				price = product_price;
+                if(item == 0 || item == 2 || item == 3|| item == 1) {
+                    label_1.setVisible(false);
+                    select_ice.setVisible(false);
+
+                }
+
 				break;
 			case 5:
 				path = "Food";
@@ -271,13 +271,13 @@ public class option_select extends JDialog {
 		label.setBounds(28, 311, 95, 15);
 		contentPanel.add(label);
 		
-		JLabel label_1 = new JLabel("얼음양");
+
 		label_1.setHorizontalAlignment(SwingConstants.CENTER);
 		label_1.setBounds(32, 340, 91, 15);
 		contentPanel.add(label_1);
 		
-		JComboBox select_ice= new JComboBox();
-		select_ice.setModel(new DefaultComboBoxModel(new String[] {"기본", "적게", "많이"}));
+
+		select_ice.setModel(new DefaultComboBoxModel(new String[] {"기본","없음", "적게", "많이"}));
 		select_ice.setBounds(135, 338, 202, 21);
 		contentPanel.add(select_ice);
 		{
@@ -301,7 +301,17 @@ public class option_select extends JDialog {
 
 						Size = select_size.getSelectedItem().toString();
 						shot = Integer.parseInt(select_shot.getSelectedItem().toString());
-						ice = select_ice.getSelectedItem().toString();
+						if(option == 1){
+						    if(item == 0 || item ==2 || item ==4) {
+						        ice = "없음";
+                            }
+                        }else if(option == 4) {
+						    if(item == 0 || item ==1|| item==2||item==3){
+						        ice="없음";
+                            }
+                        }else {
+                            ice = select_ice.getSelectedItem().toString();
+                        }
 						System.out.println(Product_label.getText() + "/" + price + "/" + num + "/" + cup + "/" + Size + "/" + shot + "/" + ice);
 
 						System.out.println(Price_label.getText());
