@@ -32,9 +32,6 @@ public class cofirm extends JDialog {
 		this.sb = s_b;
 
 	}
-	public void get_option_select(option_select os) {
-
-	}
 
 	/**
 	 * Create the dialog.
