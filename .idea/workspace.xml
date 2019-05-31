@@ -2,8 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="023bb973-31e5-4d4d-8131-5ce0afff40f7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/server/ServerApp_Push$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/server/ServerApp_Push$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/server/ServerApp_Push$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/server/ServerApp_Push$5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/server/ServerApp_Push$6.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/server/ServerApp_Push$7.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/server/ServerApp_Push.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/server/ServerApp_commit$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/server/ServerApp_commit$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/server/ServerApp_commit$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/server/ServerApp_commit$5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/server/ServerApp_commit$6.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/server/ServerApp_commit$7.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/server/ServerApp_commit.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/server/ServerApp_main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/ServerApp_Push$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/ServerApp_Push$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/server/ServerApp_Push$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/ServerApp_Push$2.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/ServerApp_Push$3.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/ServerApp_Push$4.class" beforeDir="false" />
@@ -11,7 +26,7 @@
       <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/ServerApp_Push$6.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/ServerApp_Push$7.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/ServerApp_Push.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/ServerApp_commit$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/ServerApp_commit$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/server/ServerApp_commit$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/ServerApp_commit$2.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/ServerApp_commit$3.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/ServerApp_commit$4.class" beforeDir="false" />
@@ -19,7 +34,7 @@
       <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/ServerApp_commit$6.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/ServerApp_commit$7.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/ServerApp_commit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/ServerApp_main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/ServerApp_main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/server/ServerApp_main$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/ServerApp_main.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/server/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/server/Client.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/server/Server.class" afterDir="false" />
@@ -43,7 +58,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/kiosk/option_select.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5738">
+            <state relative-caret-position="616">
               <caret line="317" column="21" selection-start-line="317" selection-start-column="21" selection-end-line="317" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -55,22 +70,49 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/server/server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#340#341#0" expanded="true" />
-                <element signature="e#380#381#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="266">
+              <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_Push.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="32" column="43" lean-forward="true" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/server/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+            <state relative-caret-position="209">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#628#629#0" expanded="true" />
+                <element signature="e#729#730#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_commit.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="262">
+              <caret line="84" column="36" selection-start-line="84" selection-start-column="36" selection-end-line="84" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,6 +129,12 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>OrderMenu</find>
+      <find>model_1</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -100,6 +148,7 @@
         <option value="$PROJECT_DIR$/src/com/cafe_pol/kiosk/option_select.java" />
         <option value="$PROJECT_DIR$/src/com/cafe_pol/kiosk/ServerApp_main.java" />
         <option value="$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_commit.java" />
+        <option value="$PROJECT_DIR$/src/com/cafe_pol/server/Time.java" />
         <option value="$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_main.java" />
         <option value="$PROJECT_DIR$/src/com/cafe_pol/server/server.java" />
         <option value="$PROJECT_DIR$/src/com/cafe_pol/server/Client.java" />
@@ -107,9 +156,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="227" />
-    <option name="y" value="49" />
-    <option name="width" value="1661" />
+    <option name="x" value="174" />
+    <option name="y" value="34" />
+    <option name="width" value="1157" />
     <option name="height" value="1087" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -118,6 +167,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -147,13 +198,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559279363831" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559286245727" />
     <property name="last_opened_file_path" value="$USER_HOME$/Documents/카카오톡 받은 파일" />
   </component>
   <component name="RecentsManager">
@@ -273,10 +322,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="174" y="34" width="1157" height="1087" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15458423" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27985415" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -285,7 +334,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25883576" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2633788" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991684" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -293,7 +342,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32952183" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32977778" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32948583" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -303,6 +352,34 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16364606" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26091477" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991684" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32977778" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32952183" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32948583" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+    </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/server/KioskServer.java" />
@@ -316,16 +393,6 @@
     <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/kiosk/ServerApp_Push.java" />
     <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/kiosk/ServerApp_commit.java" />
     <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/kiosk/ServerApp_main.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/kiosk/option_select.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5738">
-          <caret line="317" column="21" selection-start-line="317" selection-start-column="21" selection-end-line="317" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/kiosk/cofirm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="950">
@@ -335,30 +402,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cafe_pol.iml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_commit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_Push.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1575">
-          <caret line="86" column="35" lean-forward="true" selection-start-line="86" selection-start-column="35" selection-end-line="86" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/kiosk/Shop_basket.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -374,25 +417,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/server/server.java">
+    <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/server/Time.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/kiosk/option_select.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+        <state relative-caret-position="616">
+          <caret line="317" column="21" selection-start-line="317" selection-start-column="21" selection-end-line="317" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#340#341#0" expanded="true" />
-            <element signature="e#380#381#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/server/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+        <state relative-caret-position="209">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#628#629#0" expanded="true" />
+            <element signature="e#729#730#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_commit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="84" column="36" selection-start-line="84" selection-start-column="36" selection-end-line="84" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/server/server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_Push.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="32" column="43" lean-forward="true" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
         </state>
       </provider>
     </entry>

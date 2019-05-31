@@ -2,19 +2,21 @@ package com.cafe_pol.server;
 
 import java.awt.EventQueue;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
-import javax.swing.JLabel;
-import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
 import java.awt.Color;
-import javax.swing.JList;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class ServerApp_main extends JFrame {
 
 	private JPanel contentPane;
+	DefaultListModel model = new DefaultListModel();
+	DefaultListModel model_1 = new DefaultListModel();
+	DefaultListModel model_2 = new DefaultListModel();
+	JList list, list_1,list_2;
 
 	/**
 	 * Launch the application.
@@ -79,23 +81,39 @@ public class ServerApp_main extends JFrame {
 		lblNewLabel_3.setBounds(957, 0, 382, 46);
 		panel_1.add(lblNewLabel_3);
 
-		JList list = new JList();
+		list = new JList(model);
 		list.setBorder(new LineBorder(new Color(0, 0, 0)));
 		list.setBounds(1, 56, 222, 591);
 		panel_1.add(list);
 
-		JList list_1 = new JList();
+		list_1 = new JList(model_1);
 		list_1.setBorder(new LineBorder(new Color(0, 0, 0)));
 		list_1.setBounds(223, 56, 734, 591);
 		panel_1.add(list_1);
 
-		JList list_2 = new JList();
+		list_2 = new JList(model_2);
 		list_2.setBorder(new LineBorder(new Color(0, 0, 0)));
 		list_2.setBounds(957, 56, 382, 591);
 		panel_1.add(list_2);
-		//server ss = new server();
+
+		addItem(0,"alpha");
+
+		}
+
+
+	public void addItem(int OrderNum, String OrderMenu){
+		String DateTiem = LocalDate.now().toString()+LocalTime.now().toString();
+
+		model.add(OrderNum,OrderNum);
+		model_1.add(OrderNum,OrderMenu);
+		model_2.add(OrderNum, DateTiem);
+
+		for(int i=0;i<model_1.getSize();i++){
+			System.out.println("model1"+model_1.get(i).toString());
+		}
 
 	}
 
-
 }
+
+
