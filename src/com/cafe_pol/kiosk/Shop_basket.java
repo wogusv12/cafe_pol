@@ -50,7 +50,7 @@ public class Shop_basket extends JDialog {
 			lblNewLabel.setBounds(12, 10, 419, 25);
 			contentPanel.add(lblNewLabel);
 		}
-		
+
 
 		list.setBounds(12, 45, 419, 330);
 
@@ -70,6 +70,17 @@ public class Shop_basket extends JDialog {
 						if(model.getSize() !=0) {
 							for (int j = 0; j < model.getSize(); j++) {
 								String ToServerData = order_number + "/" + model.get(j).toString();
+								Client cl = new Client(); // 소캣 통신을 위한 객체 생성
+								try{
+									cl.SocketStart();  // 소캣 개설
+									cl.ClientRun(ToServerData); // 데이터 전송
+									cl.SocketClose(); // 소캣 해제
+									cl=null;  // 객체 제거
+
+								} catch(Exception ee){
+									ee.printStackTrace();
+								}
+
 								System.out.println(ToServerData);
 							}
 							order_number++;

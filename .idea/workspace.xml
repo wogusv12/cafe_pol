@@ -3,22 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="023bb973-31e5-4d4d-8131-5ce0afff40f7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/Client.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/Shop_basket$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/Shop_basket$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/cofirm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/cofirm$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/cofirm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/cofirm$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/cofirm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/cofirm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/option_select$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/option_select$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/option_select$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/option_select$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/option_select$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/option_select$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/option_select$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/option_select$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/option_select.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/option_select.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/server/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/server/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/server/ServerApp_main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/server/ServerApp_main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/Shop_basket$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/Shop_basket$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/Shop_basket.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/kiosk/Shop_basket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/cafe_pol/kiosk/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cafe_pol/kiosk/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/cafe_pol/kiosk/Shop_basket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cafe_pol/kiosk/Shop_basket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/cafe_pol/server/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cafe_pol/kiosk/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/cafe_pol/server/server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cafe_pol/server/server.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,17 +25,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/kiosk/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="153" selection-start-line="153" selection-end-line="232" />
+            <state relative-caret-position="242">
+              <caret line="152" column="55" selection-start-line="152" selection-start-column="55" selection-end-line="152" selection-end-column="55" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/kiosk/Shop_basket.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1197">
-              <caret line="73" column="29" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
+            <state relative-caret-position="7">
+              <caret line="45" column="9" lean-forward="true" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+              <folding>
+                <element signature="e#2815#2816#0" expanded="true" />
+                <element signature="e#2847#2848#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -53,26 +47,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/server/server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="703">
-              <caret line="69" selection-start-line="69" selection-end-line="69" />
+            <state relative-caret-position="2033">
+              <caret line="112" column="5" lean-forward="true" selection-start-line="112" selection-start-column="5" selection-end-line="112" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_Push.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="817">
-              <caret line="61" column="59" selection-start-line="61" selection-start-column="59" selection-end-line="61" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/kiosk/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+            <state relative-caret-position="95">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,10 +66,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/net/PlainSocketImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/kiosk/option_select.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2451">
-              <caret line="171" column="13" selection-start-line="171" selection-start-column="13" selection-end-line="171" selection-end-column="13" />
+            <state relative-caret-position="924">
+              <caret line="266" column="11" selection-start-line="266" selection-start-column="11" selection-end-line="266" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/kiosk/cofirm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="765">
+              <caret line="58" column="41" selection-start-line="58" selection-start-column="41" selection-end-line="58" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -119,8 +113,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1147">
-              <caret line="115" selection-start-line="115" selection-end-line="115" />
+            <state relative-caret-position="2242">
+              <caret line="118" lean-forward="true" selection-start-line="118" selection-end-line="118" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -156,17 +150,17 @@
         <option value="$PROJECT_DIR$/src/com/cafe_pol/kiosk/ServerApp_main.java" />
         <option value="$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_commit.java" />
         <option value="$PROJECT_DIR$/src/com/cafe_pol/server/Time.java" />
-        <option value="$PROJECT_DIR$/src/com/cafe_pol/kiosk/Shop_basket.java" />
         <option value="$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_main.java" />
         <option value="$PROJECT_DIR$/src/com/cafe_pol/server/Client.java" />
         <option value="$PROJECT_DIR$/src/com/cafe_pol/server/server.java" />
         <option value="$PROJECT_DIR$/src/com/cafe_pol/kiosk/Client.java" />
+        <option value="$PROJECT_DIR$/src/com/cafe_pol/kiosk/Shop_basket.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="8" />
-    <option name="y" value="14" />
+    <option name="x" value="187" />
+    <option name="y" value="17" />
     <option name="width" value="1661" />
     <option name="height" value="1375" />
   </component>
@@ -177,6 +171,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -213,7 +208,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -239,7 +233,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Client">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.cafe_pol.kiosk.Client" />
       <module name="cafe_pol" />
@@ -307,10 +301,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Client" />
         <item itemvalue="Application.server" />
         <item itemvalue="Application.ServerApp_main" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Shop_basket" />
       </list>
     </recent_temporary>
@@ -338,9 +332,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="8" y="14" width="1661" height="1375" extended-state="0" />
+    <frame x="187" y="17" width="1661" height="1375" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28732044" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29106808" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -357,7 +352,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32952183" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32901752" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32876712" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -412,24 +407,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/server/Time.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/kiosk/cofirm.java">
+    <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_Push.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="58" column="41" selection-start-line="58" selection-start-column="41" selection-end-line="58" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/kiosk/option_select.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4883">
-          <caret line="266" column="11" selection-start-line="266" selection-start-column="11" selection-end-line="266" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/kiosk/Shop_basket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1197">
-          <caret line="73" column="29" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
+        <state relative-caret-position="855">
+          <caret line="61" column="59" selection-start-line="61" selection-start-column="59" selection-end-line="61" selection-end-column="59" />
         </state>
       </provider>
     </entry>
@@ -454,24 +435,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_Push.java">
+    <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/kiosk/cofirm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="61" column="59" selection-start-line="61" selection-start-column="59" selection-end-line="61" selection-end-column="59" />
+        <state relative-caret-position="765">
+          <caret line="58" column="41" selection-start-line="58" selection-start-column="41" selection-end-line="58" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/server/server.java">
+    <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/kiosk/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
+        <state relative-caret-position="95">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/kiosk/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="152" column="55" selection-start-line="152" selection-start-column="55" selection-end-line="152" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1147">
-          <caret line="115" selection-start-line="115" selection-end-line="115" />
+        <state relative-caret-position="2242">
+          <caret line="118" lean-forward="true" selection-start-line="118" selection-end-line="118" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -485,19 +476,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/kiosk/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/server/server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="153" selection-start-line="153" selection-end-line="232" />
+        <state relative-caret-position="2033">
+          <caret line="112" column="5" lean-forward="true" selection-start-line="112" selection-start-column="5" selection-end-line="112" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/kiosk/Client.java">
+    <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/kiosk/option_select.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+        <state relative-caret-position="924">
+          <caret line="266" column="11" selection-start-line="266" selection-start-column="11" selection-end-line="266" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/kiosk/Shop_basket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7">
+          <caret line="45" column="9" lean-forward="true" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#2815#2816#0" expanded="true" />
+            <element signature="e#2847#2848#0" expanded="true" />
           </folding>
         </state>
       </provider>

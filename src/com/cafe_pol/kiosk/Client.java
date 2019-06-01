@@ -1,5 +1,7 @@
 package com.cafe_pol.kiosk;
 
+import sun.awt.geom.AreaOp;
+
 import java.io.*;
 import java.net.Socket;
 
@@ -14,12 +16,15 @@ public class Client {
     InputStreamReader isr = null;
     BufferedReader br = null;
 
+    Shop_basket sb = new Shop_basket();
+
+
     public static void main(String[] args) {
         Client cl = new Client();
         try{
-            cl.SocketStart();
-            cl.ClientRun("alpha Data");
-            cl.SocketClose();
+            cl.SocketStart(); // 소캣 개설
+            cl.ClientRun("alpha Data");  // 데이터 전송
+            cl.SocketClose();  // 소캣 해제
 
         } catch(Exception e){
             e.printStackTrace();
@@ -34,12 +39,18 @@ public class Client {
         try {
             socket = new Socket("localhost", 4201);
             System.out.println("Socket Open");
+            //Main ma = new Main();
+            //ma.setVisible(true);
+
         } catch (Exception e) {e.printStackTrace();}
     }
 
     public void ClientRun(String data) {
         try {
             //socket = new Socket("localhost", 4201);
+            /*
+            String SBdata = sb.model.get(0).toString();
+            System.out.println(SBdata);*/
 
             os = socket.getOutputStream();
             osw = new OutputStreamWriter(os);
