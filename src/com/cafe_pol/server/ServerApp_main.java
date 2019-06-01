@@ -102,14 +102,14 @@ public class ServerApp_main extends JFrame {
 
 
 	public void addItem(int OrderNum, String OrderMenu){
-		String DateTiem = LocalDate.now().toString()+LocalTime.now().toString();
+		String DateTiem = LocalDate.now().toString()+" / "+LocalTime.now().toString();
 
 		model.add(OrderNum,OrderNum);
 		model_1.add(OrderNum,OrderMenu);
 		model_2.add(OrderNum, DateTiem);
 
 		for(int i=0;i<model_1.getSize();i++){
-			System.out.println("model1"+model_1.get(i).toString());
+			System.out.println("model1 "+i+"번쨰 값"+model_1.get(i).toString());
 		}
 
 	}

@@ -1,4 +1,4 @@
-package com.cafe_pol.server;
+package com.cafe_pol.kiosk;
 
 import java.io.*;
 import java.net.Socket;

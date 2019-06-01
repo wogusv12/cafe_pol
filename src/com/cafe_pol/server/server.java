@@ -45,7 +45,6 @@ public class server {
                 // 클라이언트로부터 데이터를 받기 위한 InputStream 선언
 
                 //String date = LocalDate.now().toString()+ LocalTime.now().toString();
-
                 data = br.readLine();
 
                 System.out.println("클라이언트로 부터 받은 데이터:" + data);
@@ -66,7 +65,8 @@ public class server {
                 System.out.println(data);
 
                 //receiveData(data, socket);         // 받은 데이터를 그대로 다시 보내기
-                System.out.println("****** 전송 완료 ****");
+                if(socket.isClosed()) System.out.println("소캣 차단 완료");
+
 
             }
         } catch (Exception e) {

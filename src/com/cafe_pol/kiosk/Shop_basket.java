@@ -68,9 +68,9 @@ public class Shop_basket extends JDialog {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						if(model.getSize() !=0) {
-
 							for (int j = 0; j < model.getSize(); j++) {
-								System.out.println(order_number + "/" + model.get(j).toString());
+								String ToServerData = order_number + "/" + model.get(j).toString();
+								System.out.println(ToServerData);
 							}
 							order_number++;
 							model.clear();
