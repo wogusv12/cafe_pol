@@ -1,6 +1,7 @@
 package com.cafe_pol.kiosk;
 
 import sun.awt.geom.AreaOp;
+import sun.swing.table.DefaultTableCellHeaderRenderer;
 
 import java.io.*;
 import java.net.Socket;
@@ -25,6 +26,7 @@ public class Client {
             cl.SocketStart(); // 소캣 개설
             cl.ClientRun("alpha Data");  // 데이터 전송
             cl.SocketClose();  // 소캣 해제
+            Thread.sleep(10);
 
         } catch(Exception e){
             e.printStackTrace();
