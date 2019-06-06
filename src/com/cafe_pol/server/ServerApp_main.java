@@ -18,22 +18,22 @@ public class ServerApp_main extends JFrame {
 	DefaultListModel model_2 = new DefaultListModel();
 	JList list, list_1,list_2;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
+		/**
+		 * Launch the application.
+		 */
+		public static void main(String[] args) {
 
 
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					ServerApp_main frame = new ServerApp_main();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
+			EventQueue.invokeLater(new Runnable() {
+				public void run() {
+					try {
+						ServerApp_main frame = new ServerApp_main();
+						frame.setVisible(true);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
 				}
-			}
-		});
+			});
 	}
 
 
@@ -96,17 +96,22 @@ public class ServerApp_main extends JFrame {
 		list_2.setBounds(957, 56, 382, 591);
 		panel_1.add(list_2);
 
-		addItem(0,"alpha");
+		addItem(0,0,"Server Start");
 
 		}
 
 
-	public void addItem(int OrderNum, String OrderMenu){
+	public void addItem(int index,int OrderNum, String OrderMenu){
 		String DateTiem = LocalDate.now().toString()+" / "+LocalTime.now().toString();
 
-		model.add(OrderNum,OrderNum);
-		model_1.add(OrderNum,OrderMenu);
-		model_2.add(OrderNum, DateTiem);
+		model.add(index,OrderNum);
+		model_1.add(index,OrderMenu);
+		model_2.add(index, DateTiem);
+		try{
+			Thread.sleep(100);
+		}catch (Exception e){
+			e.printStackTrace();
+		}
 
 		for(int i=0;i<model_1.getSize();i++){
 			System.out.println("model1 "+i+"번쨰 값"+model_1.get(i).toString());
