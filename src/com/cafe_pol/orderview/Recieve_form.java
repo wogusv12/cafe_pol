@@ -12,6 +12,8 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.SwingConstants;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 
 public class Recieve_form extends JFrame {
@@ -77,21 +79,59 @@ public class Recieve_form extends JFrame {
 		panel_3.setLayout(new GridLayout(0, 2, 0, 0));
 
 		JButton btnNewButton = new JButton("New button");
+		btnNewButton.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("NewButton");
+			}
+		});
 		panel_3.add(btnNewButton);
 
-		JButton btnNewButton_1 = new JButton("New button");
+		JButton btnNewButton_1 = new JButton("New button1");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("bNB1");
+			}
+		});
 		panel_3.add(btnNewButton_1);
 
-		JButton btnNewButton_4 = new JButton("New button");
-		panel_3.add(btnNewButton_4);
 
-		JButton btnNewButton_2 = new JButton("New button");
+
+		JButton btnNewButton_2 = new JButton("New button2");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("bNB2");
+			}
+		});
 		panel_3.add(btnNewButton_2);
 
-		JButton btnNewButton_3 = new JButton("New button");
+		JButton btnNewButton_3 = new JButton("New button3");
+		btnNewButton_3.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("bNB3");
+			}
+		});
 		panel_3.add(btnNewButton_3);
 
-		JButton btnNewButton_5 = new JButton("New button");
+		JButton btnNewButton_4 = new JButton("New button4");
+		btnNewButton_4.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("bNB4");
+			}
+		});
+		panel_3.add(btnNewButton_4);
+
+		JButton btnNewButton_5 = new JButton("New button5");
+		btnNewButton_5.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("bNB5");
+			}
+		});
 		panel_3.add(btnNewButton_5);
 	}
 }
