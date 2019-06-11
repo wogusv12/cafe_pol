@@ -1,182 +1,235 @@
 package com.cafe_pol.server;
 
-import java.awt.EventQueue;
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
 
-import javax.swing.JFrame;
+import javax.swing.JButton;
+import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.BoxLayout;
+import javax.swing.DefaultListCellRenderer;
+
+import java.awt.GridLayout;
+import java.awt.Font;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
-import java.awt.Font;
 import javax.swing.JList;
 import javax.swing.AbstractListModel;
-import javax.swing.border.LineBorder;
-import java.awt.Color;
-import java.awt.event.KeyEvent;
-import java.awt.ComponentOrientation;
-import java.awt.Cursor;
-import javax.swing.JButton;
+import java.awt.Component;
+import javax.swing.border.BevelBorder;
+import javax.swing.border.CompoundBorder;
+import javax.swing.border.EtchedBorder;
 
-public class ServerApp_commit extends JFrame {
+public class ServerApp_commit extends JDialog {
+	
+	JList NameList, NumList, CupList, SizeList, ShotList, IceList;
 
-	private JPanel contentPane;
+	private final JPanel contentPanel = new JPanel();
 
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					ServerApp_commit frame = new ServerApp_commit();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
+		try {
+			ServerApp_commit dialog = new ServerApp_commit();
+			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+			dialog.setVisible(true);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	/**
-	 * Create the frame.
+	 * Create the dialog.
 	 */
 	public ServerApp_commit() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 650, 500);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
-		contentPane.setLayout(null);
-		
-		JLabel label = new JLabel("주문번호");
-		label.setBounds(12, 49, 57, 15);
-		contentPane.add(label);
-		
-		JLabel label_1 = new JLabel("새로운 주문이 도착했습니다.");
-		label_1.setFont(new Font("굴림", Font.PLAIN, 16));
-		label_1.setHorizontalAlignment(SwingConstants.CENTER);
-		label_1.setBounds(188, 10, 231, 28);
-		contentPane.add(label_1);
-		
-		JLabel label_2 = new JLabel("2019-05-28 17:18:19");
-		label_2.setBounds(479, 49, 116, 15);
-		contentPane.add(label_2);
-		
-		JLabel label_3 = new JLabel("커피 이름");
-		label_3.setBounds(46, 77, 57, 15);
-		contentPane.add(label_3);
-		
-		JList list = new JList();
-		list.setBorder(new LineBorder(new Color(0, 0, 0)));
-		list.setModel(new AbstractListModel() {
-			String[] values = new String[] {"제주 후지샷 크림 프라푸치노"};
-			public int getSize() {
-				return values.length;
+		setBounds(100, 100, 900, 475);
+		getContentPane().setLayout(new BorderLayout());
+		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		getContentPane().add(contentPanel, BorderLayout.CENTER);
+		contentPanel.setLayout(new BorderLayout(0, 0));
+		{
+			JPanel panel = new JPanel();
+			contentPanel.add(panel, BorderLayout.NORTH);
+			panel.setLayout(new GridLayout(0, 6, 0, 0));
+			{
+				JLabel lblNewLabel_3 = new JLabel("주문메뉴");
+				lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
+				panel.add(lblNewLabel_3);
 			}
-			public Object getElementAt(int index) {
-				return values[index];
+			{
+				JLabel lblNewLabel_4 = new JLabel("수량");
+				lblNewLabel_4.setHorizontalAlignment(SwingConstants.CENTER);
+				panel.add(lblNewLabel_4);
 			}
-		});
-		list.setBounds(46, 102, 200, 258);
-		contentPane.add(list);
-		
-		JLabel label_4 = new JLabel("갯수");
-		label_4.setBounds(258, 77, 57, 15);
-		contentPane.add(label_4);
-		
-		JList list_1 = new JList();
-		list_1.setCursor(Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR));
-		list_1.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
-		list_1.setModel(new AbstractListModel() {
-			String[] values = new String[] {"1"};
-			public int getSize() {
-				return values.length;
+			{
+				JLabel lblNewLabel_5 = new JLabel("컵");
+				lblNewLabel_5.setHorizontalAlignment(SwingConstants.CENTER);
+				panel.add(lblNewLabel_5);
 			}
-			public Object getElementAt(int index) {
-				return values[index];
+			{
+				JLabel lblNewLabel_6 = new JLabel("사이즈");
+				lblNewLabel_6.setHorizontalAlignment(SwingConstants.CENTER);
+				panel.add(lblNewLabel_6);
 			}
-		});
-		list_1.setBorder(new LineBorder(new Color(0, 0, 0)));
-		list_1.setBounds(258, 102, 35, 258);
-		contentPane.add(list_1);
-		
-		JLabel label_5 = new JLabel("컵");
-		label_5.setDisplayedMnemonic(KeyEvent.VK_ENTER);
-		label_5.setBounds(305, 77, 68, 15);
-		contentPane.add(label_5);
-		
-		JList list_2 = new JList();
-		list_2.setModel(new AbstractListModel() {
-			String[] values = new String[] {"머그컵"};
-			public int getSize() {
-				return values.length;
+			{
+				JLabel lblNewLabel_7 = new JLabel("샷추가");
+				lblNewLabel_7.setHorizontalAlignment(SwingConstants.CENTER);
+				panel.add(lblNewLabel_7);
 			}
-			public Object getElementAt(int index) {
-				return values[index];
+			{
+				JLabel lblNewLabel_8 = new JLabel("얼음양");
+				lblNewLabel_8.setHorizontalAlignment(SwingConstants.CENTER);
+				panel.add(lblNewLabel_8);
 			}
-		});
-		list_2.setBorder(new LineBorder(new Color(0, 0, 0)));
-		list_2.setBounds(305, 102, 68, 258);
-		contentPane.add(list_2);
-		
-		JLabel label_6 = new JLabel("사이즈");
-		label_6.setBounds(385, 77, 57, 15);
-		contentPane.add(label_6);
-		
-		JList list_3 = new JList();
-		list_3.setModel(new AbstractListModel() {
-			String[] values = new String[] {"Tall"};
-			public int getSize() {
-				return values.length;
+		}
+		{
+			JPanel panel = new JPanel();
+			contentPanel.add(panel, BorderLayout.CENTER);
+			panel.setLayout(new GridLayout(0, 6, 0, 0));
+			{
+				NameList = new JList();
+				NameList.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
+			
+				NameList.setFocusable(false);
+				NameList.setModel(new AbstractListModel() {
+					String[] values = new String[] {"아메리카노"};
+					public int getSize() {
+						return values.length;
+					}
+					public Object getElementAt(int index) {
+						return values[index];
+					}
+				});
+				panel.add(NameList);
 			}
-			public Object getElementAt(int index) {
-				return values[index];
+			{
+				NumList = new JList();
+				NumList.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
+
+				//NumList.setEnabled(false);
+				NumList.setFocusable(false);
+			
+				NumList.setModel(new AbstractListModel() {
+					String[] values = new String[] {"1"};
+					public int getSize() {
+						return values.length;
+					}
+					public Object getElementAt(int index) {
+						return values[index];
+					}
+				});
+				panel.add(NumList);
 			}
-		});
-		list_3.setBorder(new LineBorder(new Color(0, 0, 0)));
-		list_3.setBounds(387, 103, 83, 257);
-		contentPane.add(list_3);
-		
-		JLabel label_7 = new JLabel("샷추가");
-		label_7.setBounds(479, 77, 57, 15);
-		contentPane.add(label_7);
-		
-		JList list_4 = new JList();
-		list_4.setModel(new AbstractListModel() {
-			String[] values = new String[] {"0"};
-			public int getSize() {
-				return values.length;
+			{
+				CupList = new JList();
+				CupList.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
+				CupList.setModel(new AbstractListModel() {
+					String[] values = new String[] {"\uBA38\uADF8\uCEF5"};
+					public int getSize() {
+						return values.length;
+					}
+					public Object getElementAt(int index) {
+						return values[index];
+					}
+				});
+				
+				panel.add(CupList);
 			}
-			public Object getElementAt(int index) {
-				return values[index];
+			{
+				SizeList = new JList();
+				SizeList.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
+				SizeList.setModel(new AbstractListModel() {
+					String[] values = new String[] {"Tall"};
+					public int getSize() {
+						return values.length;
+					}
+					public Object getElementAt(int index) {
+						return values[index];
+					}
+				});
+				panel.add(SizeList);
 			}
-		});
-		list_4.setBorder(new LineBorder(new Color(0, 0, 0)));
-		list_4.setBounds(482, 103, 35, 258);
-		contentPane.add(list_4);
-		
-		JLabel lblNewLabel = new JLabel("얼음양");
-		lblNewLabel.setBounds(537, 77, 57, 15);
-		contentPane.add(lblNewLabel);
-		
-		JList list_5 = new JList();
-		list_5.setModel(new AbstractListModel() {
-			String[] values = new String[] {"없음"};
-			public int getSize() {
-				return values.length;
+			{
+				ShotList = new JList();
+				ShotList.setModel(new AbstractListModel() {
+					String[] values = new String[] {"0"};
+					public int getSize() {
+						return values.length;
+					}
+					public Object getElementAt(int index) {
+						return values[index];
+					}
+				});
+				ShotList.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
+				panel.add(ShotList);
 			}
-			public Object getElementAt(int index) {
-				return values[index];
+			{
+				IceList = new JList();
+				IceList.setModel(new AbstractListModel() {
+					String[] values = new String[] {"\uC5C6\uC74C"};
+					public int getSize() {
+						return values.length;
+					}
+					public Object getElementAt(int index) {
+						return values[index];
+					}
+				});
+				IceList.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
+				panel.add(IceList);
 			}
-		});
-		list_5.setBorder(new LineBorder(new Color(0, 0, 0)));
-		list_5.setBounds(535, 103, 57, 258);
-		contentPane.add(list_5);
+		}
+		{
+			JPanel buttonPane = new JPanel();
+			getContentPane().add(buttonPane, BorderLayout.SOUTH);
+			buttonPane.setLayout(new GridLayout(0, 2, 0, 0));
+			{
+				JButton okButton = new JButton("\uC2B9\uC778");
+				okButton.setFont(new Font("굴림", Font.PLAIN, 24));
+				okButton.setActionCommand("OK");
+				buttonPane.add(okButton);
+				getRootPane().setDefaultButton(okButton);
+			}
+			{
+				JButton cancelButton = new JButton("\uAC70\uBD80");
+				cancelButton.setFont(new Font("굴림", Font.PLAIN, 24));
+				cancelButton.setActionCommand("Cancel");
+				buttonPane.add(cancelButton);
+			}
+		}
+		{
+			JPanel panel = new JPanel();
+			getContentPane().add(panel, BorderLayout.NORTH);
+			panel.setLayout(new GridLayout(1, 0, 0, 0));
+			{
+				JLabel lblNewLabel = new JLabel("A-32");
+				panel.add(lblNewLabel);
+			}
+			{
+				JLabel lblNewLabel_1 = new JLabel("Order");
+				lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
+				lblNewLabel_1.setFont(new Font("함초롬굴림", Font.PLAIN, 30));
+				panel.add(lblNewLabel_1);
+			}
+			{
+				JLabel lblNewLabel_2 = new JLabel("2019.00.00 00:00:00");
+				lblNewLabel_2.setHorizontalAlignment(SwingConstants.RIGHT);
+				panel.add(lblNewLabel_2);
+			}
+		}
 		
-		JButton btnNewButton = new JButton("확인");
-		btnNewButton.setActionCommand("");
-		btnNewButton.setBounds(2, 399, 628, 58);
-		contentPane.add(btnNewButton);
+		setCenterAlign(NameList);
+		setCenterAlign(NumList);
+		setCenterAlign(CupList);
+		setCenterAlign(SizeList);
+		setCenterAlign(ShotList);
+		setCenterAlign(IceList);
 	}
+	
+	public void setCenterAlign(JList jlist) {
+		DefaultListCellRenderer renderer =  (DefaultListCellRenderer)jlist.getCellRenderer();  
+		renderer.setHorizontalAlignment(JLabel.CENTER);
+	}
+
 }
