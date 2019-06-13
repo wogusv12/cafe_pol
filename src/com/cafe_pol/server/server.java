@@ -1,6 +1,7 @@
 package com.cafe_pol.server;
 
 
+import javax.swing.*;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -9,6 +10,14 @@ import java.time.LocalTime;
 import java.util.StringTokenizer;
 
 public class server {
+
+    DefaultListModel name= new DefaultListModel();
+    DefaultListModel num= new DefaultListModel();
+    DefaultListModel cup= new DefaultListModel();
+    DefaultListModel size= new DefaultListModel();
+    DefaultListModel shot= new DefaultListModel();
+    DefaultListModel ice= new DefaultListModel();
+    int index = 0;
     public static void main(String[] args) {
 
 
@@ -29,10 +38,13 @@ public class server {
 
         ServerApp_main sm = new ServerApp_main();
         sm.setVisible(true);
-
+        ServerApp_commit sc = new ServerApp_commit();
         try {
             server = new ServerSocket(port);
+
             while (true) {
+                sc.setVisible(true);
+
                 System.out.println("-------접속 대기중------");
                 socket = server.accept();         // 클라이언트가 접속하면 통신할 수 있는 소켓 반환
                 System.out.println(socket.getInetAddress() + "로 부터"+i+"번째 연결요청이 들어옴");
@@ -62,6 +74,14 @@ public class server {
                     System.out.println("문자" + (x + 1) + " = " + values[x]);
                 }
                 String kstr="";
+                name.add(index, values[1]);
+                num.add(index,values[3]);
+                cup.add(index,values[4]);
+                size.add(index,values[5]);
+                shot.add(index,values[6]);
+                ice.add(index,values[7]);
+                index++;
+
 
                 String OrderNumStr = values[0];
                 int OrderNum = Integer.parseInt(OrderNumStr);
@@ -73,21 +93,23 @@ public class server {
                 i=i+1;
 
 
+
                 System.out.println(data);
 
                 //receiveData(data, socket);         // 받은 데이터를 그대로 다시 보내기
-                if(socket.isClosed()) System.out.println("소캣 차단 완료");
-
-
+                if(socket.isClosed()){ System.out.println("소캣 차단 완료"); break;}
             }
+
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
             try {
+
                 br.close();
                 isr.close();
                 is.close();
                 server.close();
+
             } catch (Exception e) {
                 e.printStackTrace();
             }

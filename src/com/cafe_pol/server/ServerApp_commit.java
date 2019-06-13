@@ -3,27 +3,25 @@ package com.cafe_pol.server;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JPanel;
+import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-import javax.swing.BoxLayout;
-import javax.swing.DefaultListCellRenderer;
 
 import java.awt.GridLayout;
 import java.awt.Font;
-import javax.swing.JLabel;
-import javax.swing.SwingConstants;
-import javax.swing.JList;
-import javax.swing.AbstractListModel;
 import java.awt.Component;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.EtchedBorder;
 
 public class ServerApp_commit extends JDialog {
-	
+
 	JList NameList, NumList, CupList, SizeList, ShotList, IceList;
+	DefaultListModel name= new DefaultListModel();
+	DefaultListModel num= new DefaultListModel();
+	DefaultListModel cup= new DefaultListModel();
+	DefaultListModel size= new DefaultListModel();
+	DefaultListModel shot= new DefaultListModel();
+	DefaultListModel ice= new DefaultListModel();
 
 	private final JPanel contentPanel = new JPanel();
 
@@ -91,7 +89,7 @@ public class ServerApp_commit extends JDialog {
 			{
 				NameList = new JList();
 				NameList.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-			
+
 				NameList.setFocusable(false);
 				NameList.setModel(new AbstractListModel() {
 					String[] values = new String[] {"아메리카노"};
@@ -110,7 +108,7 @@ public class ServerApp_commit extends JDialog {
 
 				//NumList.setEnabled(false);
 				NumList.setFocusable(false);
-			
+
 				NumList.setModel(new AbstractListModel() {
 					String[] values = new String[] {"1"};
 					public int getSize() {
@@ -134,7 +132,7 @@ public class ServerApp_commit extends JDialog {
 						return values[index];
 					}
 				});
-				
+
 				panel.add(CupList);
 			}
 			{
@@ -218,7 +216,7 @@ public class ServerApp_commit extends JDialog {
 				panel.add(lblNewLabel_2);
 			}
 		}
-		
+
 		setCenterAlign(NameList);
 		setCenterAlign(NumList);
 		setCenterAlign(CupList);
@@ -226,10 +224,26 @@ public class ServerApp_commit extends JDialog {
 		setCenterAlign(ShotList);
 		setCenterAlign(IceList);
 	}
-	
+
 	public void setCenterAlign(JList jlist) {
-		DefaultListCellRenderer renderer =  (DefaultListCellRenderer)jlist.getCellRenderer();  
+		DefaultListCellRenderer renderer =  (DefaultListCellRenderer)jlist.getCellRenderer();
 		renderer.setHorizontalAlignment(JLabel.CENTER);
+	}
+
+	public void getmodel(DefaultListModel name, DefaultListModel num, DefaultListModel cup, DefaultListModel size, DefaultListModel shot, DefaultListModel ice) {
+		this.name = name;
+		this.num = num;
+		this.cup = cup;
+		this.size = size;
+		this.shot = shot;
+		this.ice = ice;
+		NameList.setModel(name);
+		NumList.setModel(num);
+		CupList.setModel(cup);
+		SizeList.setModel(size);
+		ShotList.setModel(shot);
+		IceList.setModel(ice);
+
 	}
 
 }

@@ -1,12 +1,18 @@
 package com.cafe_pol.server;
 
+import javafx.scene.control.Alert;
+
 import java.awt.EventQueue;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
 import javax.swing.border.LineBorder;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import java.awt.Color;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
@@ -95,6 +101,37 @@ public class ServerApp_main extends JFrame {
 		list_2.setBorder(new LineBorder(new Color(0, 0, 0)));
 		list_2.setBounds(957, 56, 382, 591);
 		panel_1.add(list_2);
+
+
+		list_1.addMouseListener(new MouseListener() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if(e.getClickCount()==2) {
+					ServerApp_Push sp = new ServerApp_Push();
+					sp.setVisible(true);
+				}
+			}
+
+			@Override
+			public void mousePressed(MouseEvent e) {
+
+			}
+
+			@Override
+			public void mouseReleased(MouseEvent e) {
+
+			}
+
+			@Override
+			public void mouseEntered(MouseEvent e) {
+
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e) {
+
+			}
+		});
 
 		addItem(0,0,"Server Start");
 

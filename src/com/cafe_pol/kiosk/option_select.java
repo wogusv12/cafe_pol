@@ -49,7 +49,7 @@ public class option_select extends JDialog {
 	int[] Blandid_price = {6100,6300,6300,5000,6500,6900};
 
 	String[] Tibana = {"그린 티 라뗴", "라임 패션 티", "레몬 민트 티", "민트 블렌드 티", "아이스 라임 패션 티", "아이스 레몬 민트 티"};
-	String[] Tibana_en = {"Green Tea Latte","Lime Passion Tea","Iced Lemon Mint Tea","Mint Blend Brewed Tea","Iced Lime Passion Tea", "Iced Lemon Mint Tea"};
+	String[] Tibana_en = {"Green Tea Latte","Lime Passion Tea","Lemon Mint Tea","Mint Blend Brewed Tea","Iced Lime Passion Tea", "Iced Lemon Mint Tea"};
 	int[] Tibana_price = {5900,5600,5600,4100,5600,5600};
 
 	String[] Food= {"DT밀당 케이크 촉촉 초코", "구운 바나나 케이크", "레드벨벳 크림치즈 케이크", "마스카포네 티라미수 케이크", "블루베리 쿠키 치즈 케이크", "초콜릿 페스티벌 케이크"};
