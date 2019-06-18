@@ -9,6 +9,8 @@ import javax.swing.border.EmptyBorder;
 import java.awt.GridLayout;
 import java.awt.Font;
 import java.awt.Component;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.EtchedBorder;
@@ -22,6 +24,9 @@ public class ServerApp_commit extends JDialog {
 	DefaultListModel size= new DefaultListModel();
 	DefaultListModel shot= new DefaultListModel();
 	DefaultListModel ice= new DefaultListModel();
+
+	int price=0;
+
 
 	private final JPanel contentPanel = new JPanel();
 
@@ -42,6 +47,8 @@ public class ServerApp_commit extends JDialog {
 	 * Create the dialog.
 	 */
 	public ServerApp_commit() {
+
+
 		setBounds(100, 100, 900, 475);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -87,11 +94,11 @@ public class ServerApp_commit extends JDialog {
 			contentPanel.add(panel, BorderLayout.CENTER);
 			panel.setLayout(new GridLayout(0, 6, 0, 0));
 			{
-				NameList = new JList();
+				NameList = new JList(name);
 				NameList.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
 
 				NameList.setFocusable(false);
-				NameList.setModel(new AbstractListModel() {
+				/*NameList.setModel(new AbstractListModel() {
 					String[] values = new String[] {"아메리카노"};
 					public int getSize() {
 						return values.length;
@@ -99,15 +106,15 @@ public class ServerApp_commit extends JDialog {
 					public Object getElementAt(int index) {
 						return values[index];
 					}
-				});
+				});*/
 				panel.add(NameList);
 			}
 			{
-				NumList = new JList();
+				NumList = new JList(num);
 				NumList.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
 
 				//NumList.setEnabled(false);
-				NumList.setFocusable(false);
+				/*NumList.setFocusable(false);
 
 				NumList.setModel(new AbstractListModel() {
 					String[] values = new String[] {"1"};
@@ -117,13 +124,13 @@ public class ServerApp_commit extends JDialog {
 					public Object getElementAt(int index) {
 						return values[index];
 					}
-				});
+				});*/
 				panel.add(NumList);
 			}
 			{
-				CupList = new JList();
+				CupList = new JList(cup);
 				CupList.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-				CupList.setModel(new AbstractListModel() {
+				/*CupList.setModel(new AbstractListModel() {
 					String[] values = new String[] {"\uBA38\uADF8\uCEF5"};
 					public int getSize() {
 						return values.length;
@@ -132,13 +139,13 @@ public class ServerApp_commit extends JDialog {
 						return values[index];
 					}
 				});
-
+*/
 				panel.add(CupList);
 			}
 			{
-				SizeList = new JList();
+				SizeList = new JList(size);
 				SizeList.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-				SizeList.setModel(new AbstractListModel() {
+				/*SizeList.setModel(new AbstractListModel() {
 					String[] values = new String[] {"Tall"};
 					public int getSize() {
 						return values.length;
@@ -146,12 +153,12 @@ public class ServerApp_commit extends JDialog {
 					public Object getElementAt(int index) {
 						return values[index];
 					}
-				});
+				});*/
 				panel.add(SizeList);
 			}
 			{
-				ShotList = new JList();
-				ShotList.setModel(new AbstractListModel() {
+				ShotList = new JList(shot);
+				/*ShotList.setModel(new AbstractListModel() {
 					String[] values = new String[] {"0"};
 					public int getSize() {
 						return values.length;
@@ -159,13 +166,13 @@ public class ServerApp_commit extends JDialog {
 					public Object getElementAt(int index) {
 						return values[index];
 					}
-				});
+				});*/
 				ShotList.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
 				panel.add(ShotList);
 			}
 			{
-				IceList = new JList();
-				IceList.setModel(new AbstractListModel() {
+				IceList = new JList(ice);
+				/*IceList.setModel(new AbstractListModel() {
 					String[] values = new String[] {"\uC5C6\uC74C"};
 					public int getSize() {
 						return values.length;
@@ -173,7 +180,7 @@ public class ServerApp_commit extends JDialog {
 					public Object getElementAt(int index) {
 						return values[index];
 					}
-				});
+				});*/
 				IceList.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
 				panel.add(IceList);
 			}
@@ -184,6 +191,12 @@ public class ServerApp_commit extends JDialog {
 			buttonPane.setLayout(new GridLayout(0, 2, 0, 0));
 			{
 				JButton okButton = new JButton("\uC2B9\uC778");
+				okButton.addActionListener(new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						removeItem();
+					}
+				});
 				okButton.setFont(new Font("굴림", Font.PLAIN, 24));
 				okButton.setActionCommand("OK");
 				buttonPane.add(okButton);
@@ -244,6 +257,25 @@ public class ServerApp_commit extends JDialog {
 		ShotList.setModel(shot);
 		IceList.setModel(ice);
 
+	}
+
+	public void addItem(int index, String menu,String price ,String num, String cup, String size, String shot, String ice){
+		name.add(index, menu);
+		this.num.add(index,num);
+		this.cup.add(index,cup);
+		this.size.add(index,size);
+		this.shot.add(index,shot);
+		this.ice.add(index,ice);
+		this.price = Integer.parseInt(price);
+	}
+
+	public void removeItem(){
+		name.clear();
+		num.clear();
+		cup.clear();
+		size.clear();
+		shot.clear();
+		ice.clear();
 	}
 
 }

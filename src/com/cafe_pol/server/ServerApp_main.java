@@ -26,20 +26,20 @@ public class ServerApp_main extends JFrame {
 
 		/**
 		 * Launch the application.
-		 */
-		public static void main(String[] args) {
+	 */
+	public static void main(String[] args) {
 
 
-			EventQueue.invokeLater(new Runnable() {
-				public void run() {
-					try {
-						ServerApp_main frame = new ServerApp_main();
-						frame.setVisible(true);
-					} catch (Exception e) {
-						e.printStackTrace();
-					}
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					ServerApp_main frame = new ServerApp_main();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
 				}
-			});
+			}
+		});
 	}
 
 
