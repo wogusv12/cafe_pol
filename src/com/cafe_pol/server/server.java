@@ -56,6 +56,8 @@ public class server {
 
                 String data = null;
 
+                sc.setVisible(true);
+
                 is = socket.getInputStream();
                 isr = new InputStreamReader(is);
                 br = new BufferedReader(isr);
