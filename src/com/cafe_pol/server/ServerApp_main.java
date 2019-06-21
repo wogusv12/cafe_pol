@@ -22,6 +22,8 @@ public class ServerApp_main extends JFrame {
 	DefaultListModel model = new DefaultListModel();
 	DefaultListModel model_1 = new DefaultListModel();
 	DefaultListModel model_2 = new DefaultListModel();
+	DefaultListModel data = new DefaultListModel();
+
 	JList list, list_1,list_2;
 
 		/**
@@ -107,7 +109,22 @@ public class ServerApp_main extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				if(e.getClickCount()==2) {
-					ServerApp_Push sp = new ServerApp_Push();
+					String s = model.get(list_1.getSelectedIndex()).toString();
+					System.out.println("주문번호 : "+s);
+					ServerApp_Push sp = new ServerApp_Push(data);
+					int index = 0;
+					for(int i = 1; i<model.getSize(); i++) {
+						System.out.println(model.get(i).toString());
+						if(model.get(i).toString().equals(s)){
+							System.out.println(data.get(i).toString());
+							sp.getData(index, data.get(i).toString());
+							index++;
+						}
+					}
+
+					for(int i =0; i<index; i++) {
+						sp.setting(i);
+					}
 					sp.setVisible(true);
 				}
 			}
@@ -133,17 +150,24 @@ public class ServerApp_main extends JFrame {
 			}
 		});
 
-		addItem(0,0,"Server Start");
+		addItem(0,0,"Server Start",1, null);
 
 		}
+	int i = 0;
 
-
-	public void addItem(int index,int OrderNum, String OrderMenu){
+	public void addItem(int index,int OrderNum, String OrderMenu, int num, String data){
 		String DateTiem = LocalDate.now().toString()+" / "+LocalTime.now().toString();
 
 		model.add(index,OrderNum);
-		model_1.add(index,OrderMenu);
+		if(num ==1){
+			model_1.add(index,OrderMenu);
+		}else {model_1.add(index,OrderMenu + " " +num+"잔");}
 		model_2.add(index, DateTiem);
+		this.data.add(i,data);
+		i++;
+		try{
+			System.out.println(this.data.get(i-1).toString());
+		}catch (Exception e) {System.out.println("data 에러");}
 		try{
 			Thread.sleep(100);
 		}catch (Exception e){

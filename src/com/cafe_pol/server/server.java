@@ -108,9 +108,9 @@ public class server {
                 for(int x=0;x<values.length;x++){
                     System.out.println(x+"번째 valuse[]값 : "+values[x]);
                 }
-                sm.addItem(commitindex+1,Integer.parseInt(values[0]),kstr);
+               // sm.addItem(commitindex+1,Integer.parseInt(values[0]),kstr);
 
-                sc.addItem(commitindex,values[1],values[2],values[3],values[4],values[5],values[6],values[7]);
+                sc.addItem(commitindex,values[1],values[2],values[3],values[4],values[5],values[6],values[7],sm,Integer.parseInt(values[0]),data);
 
                 //i=i+1;
 

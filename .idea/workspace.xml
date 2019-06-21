@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70f5c4c4-e114-4661-88e1-370db46d204a" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/com/cafe_pol/orderview/RecieveServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cafe_pol/orderview/RecieveServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/cafe_pol/orderview/Recieve_form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cafe_pol/orderview/Recieve_form.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafe_pol/com/cafe_pol/server/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_Push.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_Push.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_commit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_commit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/cafe_pol/server/server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cafe_pol/server/server.java" afterDir="false" />
+>>>>>>> c79a1fa3e58d220276bd15bc3c9c95bc6a65baa0
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,13 +29,19 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_commit.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="370">
               <caret line="263" column="32" lean-forward="true" selection-start-line="263" selection-start-column="32" selection-end-line="263" selection-end-column="32" />
+=======
+            <state relative-caret-position="-8">
+              <caret line="16" column="46" selection-start-line="14" selection-end-line="18" selection-end-column="49" />
+>>>>>>> c79a1fa3e58d220276bd15bc3c9c95bc6a65baa0
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/kiosk/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-76">
@@ -40,13 +55,20 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="513">
               <caret line="70" column="13" lean-forward="true" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_commit.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="204" column="125" lean-forward="true" selection-start-line="204" selection-start-column="125" selection-end-line="204" selection-end-column="147" />
+>>>>>>> c79a1fa3e58d220276bd15bc3c9c95bc6a65baa0
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_Push.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="-1872">
               <caret line="24" selection-start-line="24" selection-end-line="24" />
             </state>
@@ -83,6 +105,13 @@
               <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
+=======
+            <state relative-caret-position="542">
+              <caret line="144" lean-forward="true" selection-start-line="144" selection-end-line="144" />
+              <folding>
+                <element signature="e#4642#4643#0" expanded="true" />
+                <element signature="e#4660#4661#0" expanded="true" />
+>>>>>>> c79a1fa3e58d220276bd15bc3c9c95bc6a65baa0
               </folding>
             </state>
           </provider>
@@ -91,7 +120,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/kiosk/option_select.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="560">
+=======
+            <state relative-caret-position="-8">
+>>>>>>> c79a1fa3e58d220276bd15bc3c9c95bc6a65baa0
               <caret line="51" column="64" selection-start-line="51" selection-start-column="64" selection-end-line="51" selection-end-column="64" />
             </state>
           </provider>
@@ -100,8 +133,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/kiosk/Shop_basket.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="655">
               <caret line="159" column="13" lean-forward="true" selection-start-line="127" selection-start-column="8" selection-end-line="159" selection-end-column="13" />
+=======
+            <state relative-caret-position="-8">
+              <caret line="137" column="35" selection-start-line="137" selection-start-column="35" selection-end-line="137" selection-end-column="35" />
+>>>>>>> c79a1fa3e58d220276bd15bc3c9c95bc6a65baa0
             </state>
           </provider>
         </entry>
@@ -109,8 +147,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/kiosk/Client.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="684">
               <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+=======
+            <state relative-caret-position="-8">
+              <caret line="66" column="25" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
+>>>>>>> c79a1fa3e58d220276bd15bc3c9c95bc6a65baa0
             </state>
           </provider>
         </entry>
@@ -118,8 +161,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_main.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="294">
               <caret line="148" column="29" lean-forward="true" selection-start-line="148" selection-start-column="29" selection-end-line="148" selection-end-column="29" />
+=======
+            <state relative-caret-position="1352">
+              <caret line="109" column="52" lean-forward="true" selection-start-line="109" selection-start-column="52" selection-end-line="109" selection-end-column="52" />
+>>>>>>> c79a1fa3e58d220276bd15bc3c9c95bc6a65baa0
             </state>
           </provider>
         </entry>
@@ -140,22 +188,39 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/com/cafe_pol/kiosk/Client.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_commit.java" />
         <option value="$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_Push.java" />
+=======
+        <option value="$PROJECT_DIR$/src/com/cafe_pol/orderview/Recieve_form.java" />
+        <option value="$PROJECT_DIR$/src/com/cafe_pol/orderview/RecieveServer.java" />
+>>>>>>> c79a1fa3e58d220276bd15bc3c9c95bc6a65baa0
         <option value="$PROJECT_DIR$/src/com/cafe_pol/kiosk/option_select.java" />
         <option value="$PROJECT_DIR$/src/com/cafe_pol/kiosk/Shop_basket.java" />
         <option value="$PROJECT_DIR$/src/com/cafe_pol/server/server.java" />
+        <option value="$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_commit.java" />
         <option value="$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_main.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/com/cafe_pol/orderview/RecieveServer.java" />
         <option value="$PROJECT_DIR$/src/com/cafe_pol/orderview/Recieve_form.java" />
+=======
+        <option value="$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_Push.java" />
+>>>>>>> c79a1fa3e58d220276bd15bc3c9c95bc6a65baa0
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+<<<<<<< HEAD
     <option name="x" value="54" />
     <option name="y" value="454" />
     <option name="width" value="1662" />
     <option name="height" value="1100" />
+=======
+    <option name="x" value="162" />
+    <option name="y" value="146" />
+    <option name="width" value="1322" />
+    <option name="height" value="775" />
+>>>>>>> c79a1fa3e58d220276bd15bc3c9c95bc6a65baa0
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -164,30 +229,16 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+<<<<<<< HEAD
       <pane id="Scope" />
+=======
+>>>>>>> c79a1fa3e58d220276bd15bc3c9c95bc6a65baa0
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="cafe_pol" type="b2602c69:ProjectViewProjectNode" />
               <item name="cafe_pol" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cafe_pol" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cafe_pol" type="462c0819:PsiDirectoryNode" />
-              <item name="Coffee_Photo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cafe_pol" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cafe_pol" type="462c0819:PsiDirectoryNode" />
-              <item name="Coffee_Photo" type="462c0819:PsiDirectoryNode" />
-              <item name="Blandid" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cafe_pol" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cafe_pol" type="462c0819:PsiDirectoryNode" />
-              <item name="Coffee_Photo" type="462c0819:PsiDirectoryNode" />
-              <item name="Tibana(Tea)" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cafe_pol" type="b2602c69:ProjectViewProjectNode" />
@@ -221,15 +272,24 @@
               <item name="cafe_pol" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="cafe_pol" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cafe_pol" type="462c0819:PsiDirectoryNode" />
+              <item name="Coffee_Photo" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
+=======
+      <pane id="Scope" />
+>>>>>>> c79a1fa3e58d220276bd15bc3c9c95bc6a65baa0
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560410459109" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561104839424" />
     <property name="last_opened_file_path" value="C:/Program Files/Java/jdk1.8.0_201/lib/mysql-connector-java-8.0.16.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
@@ -343,10 +403,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
+<<<<<<< HEAD
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21908316" />
+=======
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1130064" />
+>>>>>>> c79a1fa3e58d220276bd15bc3c9c95bc6a65baa0
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -356,25 +419,34 @@
       <window_info id="Resources Explorer" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Run" order="2" weight="0.23284823" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+=======
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3253796" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
+>>>>>>> c79a1fa3e58d220276bd15bc3c9c95bc6a65baa0
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.329718" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Ant Build" order="5" weight="0.24960381" />
       <window_info anchor="right" id="Maven" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Assistant" order="8" visible="true" weight="0.33683205" />
     </layout>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Coffee_Photo/Tibana(Tea)/레몬 민트 티.jpg">
@@ -390,6 +462,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
@@ -398,16 +471,49 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_commit.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/kiosk/cofirm.java">
+>>>>>>> c79a1fa3e58d220276bd15bc3c9c95bc6a65baa0
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="370">
           <caret line="263" column="32" lean-forward="true" selection-start-line="263" selection-start-column="32" selection-end-line="263" selection-end-column="32" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_Push.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1872">
           <caret line="24" selection-start-line="24" selection-end-line="24" />
+=======
+    <entry file="file://$PROJECT_DIR$/Coffee_Photo/Tibana(Tea)/레몬 민트 티.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Coffee_Photo/Tibana(Tea)/아이스 레몬 민트 티.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/kiosk/option_select.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="51" column="64" selection-start-line="51" selection-start-column="64" selection-end-line="51" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/sql/DriverManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="246" selection-start-line="246" selection-end-line="246" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/orderview/RecieveServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-361">
+          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+>>>>>>> c79a1fa3e58d220276bd15bc3c9c95bc6a65baa0
         </state>
       </provider>
     </entry>
@@ -423,6 +529,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/orderview/Recieve_form.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="3040">
           <caret line="174" column="13" lean-forward="true" selection-start-line="151" selection-start-column="12" selection-end-line="174" selection-end-column="13" />
           <folding>
@@ -439,32 +546,59 @@
             <element signature="e#3913#3914#0" expanded="true" />
             <element signature="e#3970#3971#0" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="-1347">
+          <caret line="30" column="43" lean-forward="true" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+>>>>>>> c79a1fa3e58d220276bd15bc3c9c95bc6a65baa0
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/kiosk/option_select.java">
+    <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/server/server.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="560">
           <caret line="51" column="64" selection-start-line="51" selection-start-column="64" selection-end-line="51" selection-end-column="64" />
+=======
+        <state relative-caret-position="-8">
+          <caret line="16" column="46" selection-start-line="14" selection-end-line="18" selection-end-column="49" />
+>>>>>>> c79a1fa3e58d220276bd15bc3c9c95bc6a65baa0
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/kiosk/Shop_basket.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="655">
           <caret line="159" column="13" lean-forward="true" selection-start-line="127" selection-start-column="8" selection-end-line="159" selection-end-column="13" />
+=======
+        <state relative-caret-position="-8">
+          <caret line="137" column="35" selection-start-line="137" selection-start-column="35" selection-end-line="137" selection-end-column="35" />
+>>>>>>> c79a1fa3e58d220276bd15bc3c9c95bc6a65baa0
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_commit.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="684">
+          <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+=======
+        <state relative-caret-position="232">
+          <caret line="204" column="125" lean-forward="true" selection-start-line="204" selection-start-column="125" selection-end-line="204" selection-end-column="147" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/kiosk/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+        <state relative-caret-position="-8">
+          <caret line="66" column="25" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
+>>>>>>> c79a1fa3e58d220276bd15bc3c9c95bc6a65baa0
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/kiosk/Main.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="-76">
           <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
         </state>
@@ -474,6 +608,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
           <caret line="70" column="13" lean-forward="true" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
+=======
+        <state relative-caret-position="1352">
+          <caret line="109" column="52" lean-forward="true" selection-start-line="109" selection-start-column="52" selection-end-line="109" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/cafe_pol/server/ServerApp_Push.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="542">
+          <caret line="144" lean-forward="true" selection-start-line="144" selection-end-line="144" />
+          <folding>
+            <element signature="e#4642#4643#0" expanded="true" />
+            <element signature="e#4660#4661#0" expanded="true" />
+          </folding>
+>>>>>>> c79a1fa3e58d220276bd15bc3c9c95bc6a65baa0
         </state>
       </provider>
     </entry>
