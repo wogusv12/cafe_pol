@@ -19,6 +19,10 @@ import javax.swing.JButton;
 public class Recieve_form extends JFrame {
 
 	private JPanel contentPane;
+	JButton btnNewButton_6; // BigButton
+	JButton btnNewButton;
+	JButton btnNewButton_1,btnNewButton_2,btnNewButton_3,btnNewButton_4,btnNewButton_5;
+	int i=0;
 
 	/**
 	 * Launch the application.
@@ -71,67 +75,137 @@ public class Recieve_form extends JFrame {
 		panel_1.add(panel_2);
 		panel_2.setLayout(new GridLayout(0, 1, 0, 0));
 
-		JButton btnNewButton_6 = new JButton("New button");
+
+		btnNewButton_6 = new JButton("");
 		panel_2.add(btnNewButton_6);
+		btnNewButton_6.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				addButton(String.valueOf(i));
+				i=i+1;
+			}
+		});
 
 		JPanel panel_3 = new JPanel();
 		panel_1.add(panel_3);
 		panel_3.setLayout(new GridLayout(0, 2, 0, 0));
 
-		JButton btnNewButton = new JButton("New button");
+		btnNewButton = new JButton("");
 		btnNewButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("NewButton");
+				removeNum(btnNewButton.getText().toString());
 			}
 		});
 		panel_3.add(btnNewButton);
 
-		JButton btnNewButton_1 = new JButton("New button1");
+		btnNewButton_1 = new JButton("");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("bNB1");
+				removeNum(btnNewButton_1.getText().toString());
 			}
 		});
 		panel_3.add(btnNewButton_1);
 
 
 
-		JButton btnNewButton_2 = new JButton("New button2");
+		btnNewButton_2 = new JButton("");
 		btnNewButton_2.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("bNB2");
+				removeNum(btnNewButton_2.getText().toString());
 			}
 		});
 		panel_3.add(btnNewButton_2);
 
-		JButton btnNewButton_3 = new JButton("New button3");
+		btnNewButton_3 = new JButton("");
 		btnNewButton_3.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("bNB3");
+				removeNum(btnNewButton_3.getText().toString());
 			}
 		});
 		panel_3.add(btnNewButton_3);
 
-		JButton btnNewButton_4 = new JButton("New button4");
+		btnNewButton_4 = new JButton("");
 		btnNewButton_4.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("bNB4");
+				removeNum(btnNewButton_4.getText().toString());
 			}
 		});
 		panel_3.add(btnNewButton_4);
 
-		JButton btnNewButton_5 = new JButton("New button5");
+		btnNewButton_5 = new JButton("");
 		btnNewButton_5.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("bNB5");
+				removeNum(btnNewButton_5.getText().toString());
 			}
 		});
 		panel_3.add(btnNewButton_5);
+	}
+
+	void setButton(){
+		for(int i=0;i<6;i++) {
+			if (btnNewButton_5.getText().toString().equals("")) {
+				btnNewButton_5.setText(btnNewButton_6.getText().toString());
+				btnNewButton_6.setText("");
+			}
+			if (btnNewButton_4.getText().toString().equals("")) {
+				btnNewButton_4.setText(btnNewButton_5.getText().toString());
+				btnNewButton_5.setText("");
+			}
+			if (btnNewButton_3.getText().toString().equals("")) {
+				btnNewButton_3.setText(btnNewButton_4.getText().toString());
+				btnNewButton_4.setText("");
+			}
+			if (btnNewButton_2.getText().toString().equals("")) {
+				btnNewButton_2.setText(btnNewButton_3.getText().toString());
+				btnNewButton_3.setText("");
+			}
+			if (btnNewButton_1.getText().toString().equals("")) {
+				btnNewButton_1.setText(btnNewButton_2.getText().toString());
+				btnNewButton_2.setText("");
+			}
+			if (btnNewButton.getText().toString().equals("")) {
+				btnNewButton.setText(btnNewButton_1.getText().toString());
+				btnNewButton_1.setText("");
+			}
+		}
+	}
+
+	void addButton(String num){
+		btnNewButton_6.setText(String.valueOf(num));
+		setButton();
+	}
+
+	void removeNum(String num){
+		if(btnNewButton_5.getText().toString().equals(num)){
+			btnNewButton_5.setText("");
+
+		}
+		if(btnNewButton_4.getText().toString().equals(num)){
+			btnNewButton_4.setText("");
+
+		}
+		if(btnNewButton_3.getText().toString().equals(num)){
+			btnNewButton_3.setText("");
+
+		}
+		if(btnNewButton_2.getText().toString().equals(num)){
+			btnNewButton_2.setText("");
+
+		}
+		if(btnNewButton_1.getText().toString().equals(num)){
+			btnNewButton_1.setText("");
+
+		}
+		if(btnNewButton.getText().toString().equals(num)){
+			btnNewButton.setText("");
+
+		}
+		setButton();
 	}
 }
