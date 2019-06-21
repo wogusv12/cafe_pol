@@ -24,8 +24,14 @@ public class ServerApp_commit extends JDialog {
 	DefaultListModel size= new DefaultListModel();
 	DefaultListModel shot= new DefaultListModel();
 	DefaultListModel ice= new DefaultListModel();
+	DefaultListModel data = new DefaultListModel();
 
+
+	ServerApp_main sm;
 	int price=0;
+	int sm_num;
+	int order_num;
+
 
 
 	private final JPanel contentPanel = new JPanel();
@@ -194,13 +200,19 @@ public class ServerApp_commit extends JDialog {
 				okButton.addActionListener(new ActionListener() {
 					@Override
 					public void actionPerformed(ActionEvent e) {
+						for(int i = 0; i < name.getSize(); i++){
+							System.out.println(data.get(i).toString() + "asdfg");
+							sm.addItem((sm_num+i),order_num, name.get(i).toString() ,Integer.parseInt(num.get(i).toString()),data.get(i).toString());
+						}
 						removeItem();
+
 					}
 				});
 				okButton.setFont(new Font("굴림", Font.PLAIN, 24));
 				okButton.setActionCommand("OK");
 				buttonPane.add(okButton);
 				getRootPane().setDefaultButton(okButton);
+
 			}
 			{
 				JButton cancelButton = new JButton("\uAC70\uBD80");
@@ -259,7 +271,7 @@ public class ServerApp_commit extends JDialog {
 
 	}
 
-	public void addItem(int index, String menu,String price ,String num, String cup, String size, String shot, String ice){
+	public void addItem(int index, String menu,String price ,String num, String cup, String size, String shot, String ice, ServerApp_main sm, int order_num,String data){
 		name.add(index, menu);
 		this.num.add(index,num);
 		this.cup.add(index,cup);
@@ -267,6 +279,12 @@ public class ServerApp_commit extends JDialog {
 		this.shot.add(index,shot);
 		this.ice.add(index,ice);
 		this.price = Integer.parseInt(price);
+		this.sm = sm;
+		sm_num = sm.model.getSize();
+		this.order_num = order_num;
+		this.data.add(index,data);
+
+		//this.values[index] = values;//커피 1번 데이터배열 2번째
 	}
 
 	public void removeItem(){

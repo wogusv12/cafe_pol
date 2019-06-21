@@ -7,26 +7,31 @@ import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.KeyEvent;
 
-import javax.swing.AbstractListModel;
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JList;
-import javax.swing.JPanel;
-import javax.swing.SwingConstants;
+import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 
 public class ServerApp_Push extends JDialog {
 
 	private JPanel contentPane;
+	DefaultListModel name= new DefaultListModel();
+	DefaultListModel num= new DefaultListModel();
+	DefaultListModel cup= new DefaultListModel();
+	DefaultListModel size= new DefaultListModel();
+	DefaultListModel shot= new DefaultListModel();
+	DefaultListModel ice= new DefaultListModel();
+	JList list,list_1,list_2,list_3,list_4,list_5;
+
+	DefaultListModel Data= new DefaultListModel();
+	String order_num; //주문번호
+
+	int price = 0;
 
 
 	/**
 	 * Create the frame.
 	 */
-	public ServerApp_Push() {
+	public ServerApp_Push(DefaultListModel data) {
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 650, 500);
 		contentPane = new JPanel();
@@ -52,17 +57,9 @@ public class ServerApp_Push extends JDialog {
 		label_3.setBounds(46, 77, 57, 15);
 		contentPane.add(label_3);
 		
-		JList list = new JList();
+		list = new JList(name);
 		list.setBorder(new LineBorder(new Color(0, 0, 0)));
-		list.setModel(new AbstractListModel() {
-			String[] values = new String[] {"제주 후지샷 크림 프라푸치노"};
-			public int getSize() {
-				return values.length;
-			}
-			public Object getElementAt(int index) {
-				return values[index];
-			}
-		});
+
 		list.setBounds(46, 102, 200, 258);
 		contentPane.add(list);
 		
@@ -70,18 +67,10 @@ public class ServerApp_Push extends JDialog {
 		label_4.setBounds(258, 77, 57, 15);
 		contentPane.add(label_4);
 		
-		JList list_1 = new JList();
+		list_1 = new JList(num);
 		list_1.setCursor(Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR));
 		list_1.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
-		list_1.setModel(new AbstractListModel() {
-			String[] values = new String[] {"1"};
-			public int getSize() {
-				return values.length;
-			}
-			public Object getElementAt(int index) {
-				return values[index];
-			}
-		});
+
 		list_1.setBorder(new LineBorder(new Color(0, 0, 0)));
 		list_1.setBounds(258, 102, 35, 258);
 		contentPane.add(list_1);
@@ -91,16 +80,8 @@ public class ServerApp_Push extends JDialog {
 		label_5.setBounds(305, 77, 68, 15);
 		contentPane.add(label_5);
 		
-		JList list_2 = new JList();
-		list_2.setModel(new AbstractListModel() {
-			String[] values = new String[] {"머그컵"};
-			public int getSize() {
-				return values.length;
-			}
-			public Object getElementAt(int index) {
-				return values[index];
-			}
-		});
+		list_2 = new JList(cup);
+
 		list_2.setBorder(new LineBorder(new Color(0, 0, 0)));
 		list_2.setBounds(305, 102, 68, 258);
 		contentPane.add(list_2);
@@ -109,16 +90,8 @@ public class ServerApp_Push extends JDialog {
 		label_6.setBounds(385, 77, 57, 15);
 		contentPane.add(label_6);
 		
-		JList list_3 = new JList();
-		list_3.setModel(new AbstractListModel() {
-			String[] values = new String[] {"Tall"};
-			public int getSize() {
-				return values.length;
-			}
-			public Object getElementAt(int index) {
-				return values[index];
-			}
-		});
+		list_3 = new JList(size);
+
 		list_3.setBorder(new LineBorder(new Color(0, 0, 0)));
 		list_3.setBounds(387, 103, 83, 257);
 		contentPane.add(list_3);
@@ -127,16 +100,8 @@ public class ServerApp_Push extends JDialog {
 		label_7.setBounds(479, 77, 57, 15);
 		contentPane.add(label_7);
 		
-		JList list_4 = new JList();
-		list_4.setModel(new AbstractListModel() {
-			String[] values = new String[] {"0"};
-			public int getSize() {
-				return values.length;
-			}
-			public Object getElementAt(int index) {
-				return values[index];
-			}
-		});
+		list_4 = new JList(shot);
+
 		list_4.setBorder(new LineBorder(new Color(0, 0, 0)));
 		list_4.setBounds(482, 103, 35, 258);
 		contentPane.add(list_4);
@@ -145,16 +110,8 @@ public class ServerApp_Push extends JDialog {
 		lblNewLabel.setBounds(537, 77, 57, 15);
 		contentPane.add(lblNewLabel);
 		
-		JList list_5 = new JList();
-		list_5.setModel(new AbstractListModel() {
-			String[] values = new String[] {"없음"};
-			public int getSize() {
-				return values.length;
-			}
-			public Object getElementAt(int index) {
-				return values[index];
-			}
-		});
+		list_5 = new JList(ice);
+
 		list_5.setBorder(new LineBorder(new Color(0, 0, 0)));
 		list_5.setBounds(535, 103, 57, 258);
 		contentPane.add(list_5);
@@ -168,5 +125,25 @@ public class ServerApp_Push extends JDialog {
 		button.setActionCommand("");
 		button.setBounds(321, 399, 313, 58);
 		contentPane.add(button);
+	}
+
+	public void getData(int idx, String data){
+		this.Data.add(idx, data);
+	}
+
+	public void setting(int i){
+		String[] s = Data.get(i).toString().split("/");
+		order_num = s[0]; // 오더번호 입력
+		name.add(i,s[1]);
+		cup.add(i,s[4]);
+		num.add(i,s[3]);
+		size.add(i,s[5]);
+		shot.add(i,s[6]);
+		ice.add(i,s[7]);
+
+		price = price + Integer.parseInt(s[2]);
+
+
+
 	}
 }
