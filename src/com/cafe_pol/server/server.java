@@ -100,6 +100,7 @@ public class server {
 
                 String OrderNumStr = values[0];
                 int OrderNum = Integer.parseInt(OrderNumStr);
+
                 for(int n=1;n<values.length;n++) {
                     kstr = kstr+values[n];
                     System.out.println("kstr : "+kstr);
