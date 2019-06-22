@@ -83,7 +83,7 @@ public class Shop_basket extends JDialog {
 									cl.SocketClose(); // 소캣 해제
 									cl=null;  // 객체 제거
 
-									mysqlconn();
+									//mysqlconn();
 
 								} catch(Exception ee){
 									ee.printStackTrace();
@@ -116,48 +116,6 @@ public class Shop_basket extends JDialog {
 	public void input_data(String s) {
 		model.add(i, s);
 		i++;
-	}
-
-	public void mysqlconn(){
-		Connection con = null;
-		String server = "localhost";
-		String database = "cafe_pol";
-		String user_name="root";
-		String password="1234";
-
-		try{
-			Class.forName("com.mysql.cj.jdbc.Driver");
-		} catch (ClassNotFoundException e){
-			System.err.println("!! <JDBC오류> Driver load 오류 : "+e.getMessage());
-			e.printStackTrace();
-		}
-
-		try{
-			con = DriverManager.getConnection("jdbc:mysql://"+server+"/"+database+"?serverTimezone=UTC",user_name,password);
-			System.out.println("정상적으로 연결되었습니다");
-		} catch(SQLException sqle){
-			System.err.println("con load 오류 : "+sqle.getMessage());
-			sqle.printStackTrace();
-		}
-
-
-			String sql = "insert into payment(PPcomplete,PPPrice,PPStatus,PPDate) values('성공',100000,'결제완료',?)";
-			PreparedStatement pstmt=null;
-			try{
-				pstmt = con.prepareStatement(sql);
-				pstmt.setString(1, LocalDateTime.now().toString());
-				pstmt.executeUpdate();
-			} catch (SQLException e){
-				e.printStackTrace();
-			} finally {
-				try {
-					if (pstmt != null && !pstmt.isClosed()) {
-						pstmt.close();
-					}
-				} catch (SQLException e) {
-					e.printStackTrace();
-				}
-			}
 	}
 }
 

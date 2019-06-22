@@ -8,6 +8,8 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
+import java.sql.*;
+import java.time.LocalDateTime;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -132,7 +134,13 @@ public class ServerApp_Push extends JDialog {
 				} catch(Exception ee){
 					ee.printStackTrace();
 				}
+				paymentconn(order_num,String.valueOf(price));
 				System.out.println(name.get(0).toString()+num.get(0).toString()+cup.get(0).toString()+size.get(0).toString()+shot.get(0).toString()+ice.get(0).toString());
+				System.out.println("Price : " + price);
+
+				for(int i = 0;i<name.getSize();i++){
+					payDetailComm(order_num, name.get(i).toString(),num.get(i).toString(),cup.get(i).toString(),size.get(i).toString(),shot.get(i).toString(),ice.get(i).toString());
+				}
 			}
 		});
 		btnNewButton.setBounds(2, 399, 313, 58);
@@ -162,5 +170,102 @@ public class ServerApp_Push extends JDialog {
 
 
 
+	}
+
+
+
+	public void paymentconn(String order_num,String price){
+		Connection con = null;
+		String server = "localhost";
+		String database = "cafe_pol";
+		String user_name="root";
+		String password="1234";
+
+		try{
+			Class.forName("com.mysql.cj.jdbc.Driver");
+		} catch (ClassNotFoundException e){
+			System.err.println("!! <JDBC오류> Driver load 오류 : "+e.getMessage());
+			e.printStackTrace();
+		}
+
+		try{
+			con = DriverManager.getConnection("jdbc:mysql://"+server+"/"+database+"?serverTimezone=UTC",user_name,password);
+			System.out.println("정상적으로 연결되었습니다");
+		} catch(SQLException sqle){
+			System.err.println("con load 오류 : "+sqle.getMessage());
+			sqle.printStackTrace();
+		}
+
+
+		String sql = "insert into payment(PPNumber,PPcomplete,PPPrice,PPStatus,PPDate) values(?,'제조완료',?,'결제완료',?)";
+		PreparedStatement pstmt=null;
+		try{
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1,order_num);
+			pstmt.setString(2,price);
+			pstmt.setString(3, LocalDateTime.now().toString());
+			pstmt.executeUpdate();
+		} catch (SQLException e){
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	public void payDetailComm(String OrderNum, String name, String num, String cup, String size, String shot,String ice){
+		Connection con = null;
+		String server = "localhost";
+		String database = "cafe_pol";
+		String user_name="root";
+		String password="1234";
+
+		try{
+			Class.forName("com.mysql.cj.jdbc.Driver");
+		} catch (ClassNotFoundException e){
+			System.err.println("!! <JDBC오류> Driver load 오류 : "+e.getMessage());
+			e.printStackTrace();
+		}
+
+		try{
+			con = DriverManager.getConnection("jdbc:mysql://"+server+"/"+database+"?serverTimezone=UTC",user_name,password);
+			System.out.println("정상적으로 연결되었습니다");
+		} catch(SQLException sqle){
+			System.err.println("con load 오류 : "+sqle.getMessage());
+			sqle.printStackTrace();
+		}
+
+
+
+
+		String sql = "insert into paymentdetail(ProName, PPIndex, ProNum,ProCup,ProSize,ProShot,ProIce)"+
+				"  value(?, ?, ?, ?, ?, ?, ?);";
+		PreparedStatement pstmt=null;
+		try{
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1,name);
+			pstmt.setString(2,OrderNum);
+			pstmt.setString(3, num);
+			pstmt.setString(4,cup);
+			pstmt.setString(5,size);
+			pstmt.setString(6,shot);
+			pstmt.setString(7,ice);
+			pstmt.executeUpdate();
+		} catch (SQLException e){
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 }
