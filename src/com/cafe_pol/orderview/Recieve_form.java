@@ -81,8 +81,7 @@ public class Recieve_form extends JFrame {
 		btnNewButton_6.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				addButton(String.valueOf(i));
-				i=i+1;
+				setButton();
 			}
 		});
 
@@ -177,8 +176,8 @@ public class Recieve_form extends JFrame {
 	}
 
 	void addButton(String num){
-		btnNewButton_6.setText(String.valueOf(num));
 		setButton();
+		btnNewButton_6.setText(String.valueOf(num));
 	}
 
 	void removeNum(String num){

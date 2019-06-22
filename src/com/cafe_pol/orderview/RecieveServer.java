@@ -36,6 +36,7 @@ public class RecieveServer {
                 System.out.println("-------접속 대기중------");
                 socket = server.accept();         // 클라이언트가 접속하면 통신할 수 있는 소켓 반환
                 System.out.println(socket.getInetAddress() + "로 부터" + i + "번째 연결요청이 들어옴");
+                i=i+1;
 
                 String data = null;
 

@@ -5,6 +5,8 @@ import java.awt.ComponentOrientation;
 import java.awt.Cursor;
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 
 import javax.swing.*;
@@ -25,7 +27,7 @@ public class ServerApp_Push extends JDialog {
 	DefaultListModel Data= new DefaultListModel();
 	String order_num; //주문번호
 
-	int price = 0;
+	int price = 0; //가격
 
 
 	/**
@@ -117,7 +119,22 @@ public class ServerApp_Push extends JDialog {
 		contentPane.add(list_5);
 		
 		JButton btnNewButton = new JButton("제조 완료");
-		btnNewButton.setActionCommand("");
+		btnNewButton.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				ReciecveClient rc = new ReciecveClient();
+				try{
+					rc.SocketStart(); // 소캣 개설
+					rc.ClientRun(order_num);  // 데이터 전송
+					rc.SocketClose();  // 소캣 해제
+					Thread.sleep(10);
+
+				} catch(Exception ee){
+					ee.printStackTrace();
+				}
+				System.out.println(name.get(0).toString()+num.get(0).toString()+cup.get(0).toString()+size.get(0).toString()+shot.get(0).toString()+ice.get(0).toString());
+			}
+		});
 		btnNewButton.setBounds(2, 399, 313, 58);
 		contentPane.add(btnNewButton);
 		
