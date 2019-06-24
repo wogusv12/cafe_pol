@@ -24,12 +24,13 @@ DROP TABLE IF EXISTS `payment`;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `payment` (
   `PPIndex` int(11) NOT NULL AUTO_INCREMENT,
+  `PPNumber` int(11) DEFAULT NULL,
   `PPcomplete` varchar(45) NOT NULL,
   `PPPrice` int(11) NOT NULL,
   `PPStatus` varchar(45) NOT NULL,
   `PPDate` varchar(45) NOT NULL,
   PRIMARY KEY (`PPIndex`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=65 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +39,7 @@ CREATE TABLE `payment` (
 
 LOCK TABLES `payment` WRITE;
 /*!40000 ALTER TABLE `payment` DISABLE KEYS */;
-INSERT INTO `payment` VALUES (1,'성공',100000,'결제완료','2019-06-13T17:05:03.522');
+INSERT INTO `payment` VALUES (61,0,'제조완료',18000,'결제완료','2019-06-22T11:24:24.501'),(62,1,'제조완료',26300,'결제완료','2019-06-22T11:24:52.033'),(63,1,'제조완료',4500,'결제완료','2019-06-22T11:27:55.010'),(64,0,'제조완료',8500,'결제완료','2019-06-22T11:30:25.996');
 /*!40000 ALTER TABLE `payment` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-06-13 17:18:57
+-- Dump completed on 2019-06-24 22:04:32

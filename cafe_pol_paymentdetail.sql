@@ -24,15 +24,15 @@ DROP TABLE IF EXISTS `paymentdetail`;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `paymentdetail` (
   `PayIndex` int(11) NOT NULL AUTO_INCREMENT,
-  `ProIndex` int(11) NOT NULL,
+  `ProName` varchar(45) NOT NULL,
   `PPIndex` int(11) NOT NULL,
-  `ProNum` int(11) NOT NULL,
+  `ProNum` varchar(45) NOT NULL,
   `ProCup` varchar(45) NOT NULL,
   `ProSize` varchar(45) NOT NULL,
-  `ProShot` int(11) NOT NULL,
-  `ProPrice` int(11) NOT NULL,
+  `ProShot` varchar(45) NOT NULL,
+  `ProIce` varchar(45) NOT NULL,
   PRIMARY KEY (`PayIndex`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,6 +41,7 @@ CREATE TABLE `paymentdetail` (
 
 LOCK TABLES `paymentdetail` WRITE;
 /*!40000 ALTER TABLE `paymentdetail` DISABLE KEYS */;
+INSERT INTO `paymentdetail` VALUES (2,'0',0,'4','개인용 컵','Tall','0','기본'),(3,'0',1,'2','개인용 컵','Tall','0','기본'),(4,'0',1,'1','개인용 컵','Tall','0','기본'),(5,'0',1,'1','개인용 컵','Tall','0','기본'),(6,'0',1,'1','플라스틱 컵','Tall','0','기본'),(7,'콜드 브루 몰트',0,'1','플라스틱 컵','Tall','0','기본');
 /*!40000 ALTER TABLE `paymentdetail` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-06-13 17:18:57
+-- Dump completed on 2019-06-24 22:04:32
