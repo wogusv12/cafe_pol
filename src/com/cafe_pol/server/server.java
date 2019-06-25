@@ -5,6 +5,10 @@ import javax.swing.*;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.StringTokenizer;
@@ -116,6 +120,8 @@ public class server {
 
                 //i=i+1;
 
+                insertdetail(values);
+
 
 
                 System.out.println(data);
@@ -165,6 +171,47 @@ public class server {
                 socket.close();
             } catch (Exception e1) {
                 e1.printStackTrace();
+            }
+        }
+    }
+
+    public void insertdetail(String[] values){
+        Connection con = null;
+        String server = "localhost";
+        String database = "cafe_pol";
+        String user_name="root";
+        String password="1234";
+
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        } catch (ClassNotFoundException e){
+            System.err.println("!! <JDBC오류> Driver load 오류 : "+e.getMessage());
+            e.printStackTrace();
+        }
+
+        try{
+            con = DriverManager.getConnection("jdbc:mysql://"+server+"/"+database+"?serverTimezone=UTC",user_name,password);
+            System.out.println("정상적으로 연결되었습니다");
+        } catch(SQLException sqle){
+            System.err.println("con load 오류 : "+sqle.getMessage());
+            sqle.printStackTrace();
+        }
+
+
+        String sql = "insert into paymentdetail(ProName, PPIndex, ProNum, ProCup, ProSize, ProShot,ProIce, ProPrice) value('"+values[1]+"',"+values[0]+",'"+values[3]+"','"+values[4]+"','"+values[5]+"','"+values[6]+"','"+values[7]+"','"+values[2]+"');";
+        PreparedStatement pstmt=null;
+        try{
+            pstmt = con.prepareStatement(sql);
+            pstmt.executeUpdate();
+        } catch (SQLException e){
+            e.printStackTrace();
+        } finally {
+            try {
+                if (pstmt != null && !pstmt.isClosed()) {
+                    pstmt.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
             }
         }
     }

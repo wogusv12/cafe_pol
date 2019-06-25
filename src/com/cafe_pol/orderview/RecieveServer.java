@@ -52,6 +52,9 @@ public class RecieveServer {
 
                 String num = data;
 
+                /*int inum = Integer.parseInt(num);
+                num = String.valueOf(inum+1);*/
+
                 rf.addButton(num);
 
 
