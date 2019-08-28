@@ -4,5 +4,5 @@
 19.05.30 ~ 19.06.27  
 JAVA(Swing, Socket), MySQL  
 
-팀원(wogusv12) - UI/UI디자인 및 구현
-팀원(alpha1226) - 백엔드개발(Socket, DB)
+팀원(wogusv12) - UI/UI디자인 및 구현  
+팀원(alpha1226) - 백엔드개발(Socket, DB)  
